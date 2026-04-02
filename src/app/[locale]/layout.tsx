@@ -2,10 +2,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Inter } from "next/font/google";
-import "../globals.css";
-
-const inter = Inter({ subsets: ["latin", "latin-ext"] });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -51,28 +47,26 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={inter.className}>
-      <body className="antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "dolasads",
-              url: "https://dolasads.com",
-              email: "nikola@dolasads.com",
-              telephone: "+381653921999",
-              description:
-                "Digital marketing agency specializing in Google Ads, website creation, SEO, and landing pages.",
-              areaServed: "RS",
-            }),
-          }}
-        />
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "dolasads",
+            url: "https://dolasads.com",
+            email: "nikola@dolasads.com",
+            telephone: "+381653921999",
+            description:
+              "Digital marketing agency specializing in Google Ads, website creation, SEO, and landing pages.",
+            areaServed: "RS",
+          }),
+        }}
+      />
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </>
   );
 }
