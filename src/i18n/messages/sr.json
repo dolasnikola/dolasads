@@ -485,24 +485,24 @@
         ]
       },
       {
-        "title": "SEO optimizacija",
-        "description": "Organski rast vidljivosti na Google-u bez plaćenih reklama.",
+        "title": "GTM i GA4 integracija",
+        "description": "Vidi odakle dolaze tvoji korisnici i šta rade na sajtu. Precizni podaci za pametne odluke.",
         "features": [
-          "Tehnička SEO revizija",
-          "Optimizacija sadržaja i ključnih reči",
-          "On-page optimizacija",
-          "Praćenje pozicija",
-          "Mesečno izveštavanje"
+          "Google Analytics 4 setup",
+          "Google Tag Manager implementacija",
+          "Praćenje konverzija (forme, pozivi, kupovine)",
+          "Prilagođeni izveštaji i dashboardovi",
+          "Povezivanje sa Google Ads za optimizaciju"
         ]
       },
       {
         "title": "Kompletna usluga",
-        "description": "Sajt + Google Ads + SEO. Sve što ti treba za digitalno prisustvo.",
+        "description": "Sajt + Google Ads + analitika. Sve što ti treba za digitalno prisustvo.",
         "features": [
           "Sve iz paketa Izrada sajta",
           "Sve iz paketa Google Ads",
-          "Sve iz paketa SEO optimizacija",
-          "Analitika i tracking setup",
+          "Sve iz paketa GTM i GA4 integracija",
+          "SEO optimizacija",
           "Prioritetna podrška i komunikacija"
         ],
         "highlighted": true
@@ -512,11 +512,11 @@
   "aboutPage": {
     "meta": {
       "title": "O meni | dolasads",
-      "description": "Nikola Dolas. Digitalni marketing stručnjak sa iskustvom u Google Ads, SEO i izradi sajtova. 4+ godine u industriji."
+      "description": "Nikola Dolaš. Digitalni marketing stručnjak sa iskustvom u Google Ads, SEO i izradi sajtova. 4+ godine u industriji."
     },
     "heading": "O meni",
     "subheading": "Digitalni marketing stručnjak sa agencijskim iskustvom.",
-    "intro": "Zovem se Nikola Dolas i bavim se digitalnim marketingom sa fokusom na Google Ads, SEO i izradu sajtova. Kroz godine rada u agenciji i sa sopstvenim klijentima, stekao sam iskustvo koje primenjujem na svaki projekat.",
+    "intro": "Zovem se Nikola Dolaš i bavim se digitalnim marketingom sa fokusom na Google Ads, SEO i izradu sajtova. Kroz godine rada u agenciji i sa sopstvenim klijentima, stekao sam iskustvo koje primenjujem na svaki projekat.",
     "experienceHeading": "Radno iskustvo",
     "experiences": [
       {
@@ -561,7 +561,7 @@
     ],
     "highlightsHeading": "Ključne veštine",
     "highlights": [
-      "4+ godine u digitalnom marketingu",
+      "5+ godina u digitalnom marketingu",
       "Upravljanje budžetima od 300.000+ EUR godišnje",
       "Google Ads sertifikovan stručnjak",
       "Iskustvo sa programmatic advertising",

@@ -485,24 +485,24 @@
         ]
       },
       {
-        "title": "SEO Optimization",
-        "description": "Organic growth of visibility on Google without paid ads.",
+        "title": "GTM & GA4 Integration",
+        "description": "See where your visitors come from and what they do on your site. Precise data for smart decisions.",
         "features": [
-          "Technical SEO audit",
-          "Content and keyword optimization",
-          "On-page optimization",
-          "Position tracking",
-          "Monthly reporting"
+          "Google Analytics 4 setup",
+          "Google Tag Manager implementation",
+          "Conversion tracking (forms, calls, purchases)",
+          "Custom reports and dashboards",
+          "Integration with Google Ads for optimization"
         ]
       },
       {
         "title": "Full Service",
-        "description": "Website + Google Ads + SEO. Everything you need for digital presence.",
+        "description": "Website + Google Ads + analytics. Everything you need for digital presence.",
         "features": [
           "Everything from the Website package",
           "Everything from the Google Ads package",
-          "Everything from the SEO package",
-          "Analytics and tracking setup",
+          "Everything from the GTM & GA4 package",
+          "SEO optimization",
           "Priority support and communication"
         ],
         "highlighted": true
@@ -512,11 +512,11 @@
   "aboutPage": {
     "meta": {
       "title": "About | dolasads",
-      "description": "Nikola Dolas. Digital marketing specialist with experience in Google Ads, SEO and website development. 4+ years in the industry."
+      "description": "Nikola Dolaš. Digital marketing specialist with experience in Google Ads, SEO and website development. 4+ years in the industry."
     },
     "heading": "About Me",
     "subheading": "Digital marketing specialist with agency experience.",
-    "intro": "My name is Nikola Dolas and I specialize in digital marketing with a focus on Google Ads, SEO and website development. Through years of agency work and working with my own clients, I've gained experience that I apply to every project.",
+    "intro": "My name is Nikola Dolaš and I specialize in digital marketing with a focus on Google Ads, SEO and website development. Through years of agency work and working with my own clients, I've gained experience that I apply to every project.",
     "experienceHeading": "Work Experience",
     "experiences": [
       {
@@ -561,7 +561,7 @@
     ],
     "highlightsHeading": "Key Skills",
     "highlights": [
-      "4+ years in digital marketing",
+      "5+ years in digital marketing",
       "Managing budgets of 300,000+ EUR per year",
       "Google Ads certified specialist",
       "Experience with programmatic advertising",
