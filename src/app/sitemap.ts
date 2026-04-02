@@ -6,6 +6,8 @@ const SERVICE_SLUGS = [
   "seo-optimizacija",
   "optimizacija-sajta",
   "landing-stranice",
+  "digitalni-marketing",
+  "analitika-i-tracking",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -77,5 +79,47 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ]
   );
 
-  return [...staticPages, ...servicePages];
+  const newPages: MetadataRoute.Sitemap = [
+    // Healthcare niche LP
+    {
+      url: `${baseUrl}/sr/za-ordinacije`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/en/for-clinics`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Pricing
+    {
+      url: `${baseUrl}/sr/cenovnik`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/en/pricing`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    // About
+    {
+      url: `${baseUrl}/sr/o-meni`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/en/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+  ];
+
+  return [...staticPages, ...servicePages, ...newPages];
 }

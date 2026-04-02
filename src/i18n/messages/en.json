@@ -6,7 +6,10 @@
   "nav": {
     "cta": "Contact me",
     "services": "Services",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "about": "About",
+    "forClinics": "For Clinics"
   },
   "hero": {
     "headline": "From zero to first clients. Through Google.",
@@ -140,6 +143,16 @@
         "slug": "landing-stranice",
         "title": "Landing Page Creation",
         "description": "Landing pages designed for conversions. Every element serves one goal: turning visitors into clients."
+      },
+      {
+        "slug": "digitalni-marketing",
+        "title": "Digital Marketing",
+        "description": "Complete digital strategy for your business. From planning to execution, all services in one place."
+      },
+      {
+        "slug": "analitika-i-tracking",
+        "title": "Analytics & Tracking",
+        "description": "Google Analytics 4, Google Tag Manager and conversion tracking. Precise data for smart decisions."
       }
     ]
   },
@@ -278,6 +291,60 @@
         "Conversion tracking integrated"
       ],
       "cta": "Get a landing page quote"
+    },
+    "digitalni-marketing": {
+      "meta": {
+        "title": "Digital Marketing | dolasads",
+        "description": "Complete digital strategy for your business. Google Ads, SEO, website development, analytics. All in one place."
+      },
+      "heroTitle": "Digital Marketing",
+      "heroSubtitle": "Complete digital strategy for growing your business.",
+      "sections": [
+        {
+          "heading": "All digital services in one place",
+          "content": "Digital marketing is not just one channel. It's a strategy that combines website, SEO, paid advertising and analytics into a whole that delivers results. Instead of coordinating multiple people, you get one specialist who covers everything."
+        },
+        {
+          "heading": "An approach that works",
+          "content": "I start by analyzing your business and target audience. Based on that, I create a strategy that includes the right mix of channels. Every dollar of budget goes where it brings the highest return."
+        }
+      ],
+      "features": [
+        "Digital strategy development",
+        "Google Ads campaigns and management",
+        "SEO optimization and content",
+        "Website development optimized for conversions",
+        "Analytics and performance tracking",
+        "Monthly reporting and optimization"
+      ],
+      "cta": "Get a digital marketing quote"
+    },
+    "analitika-i-tracking": {
+      "meta": {
+        "title": "Analytics & Tracking | dolasads",
+        "description": "Google Analytics 4 setup, Google Tag Manager implementation and conversion tracking. Precise data for smart business decisions."
+      },
+      "heroTitle": "Analytics & Tracking",
+      "heroSubtitle": "Precise data for smart business decisions.",
+      "sections": [
+        {
+          "heading": "Why data matters",
+          "content": "Without tracking data, marketing budget is guesswork. I set up Google Analytics 4 and Google Tag Manager so you know exactly where your clients come from, what they do on your site, and how much each conversion costs."
+        },
+        {
+          "heading": "What I set up",
+          "content": "Complete GA4 implementation with tracking of all important events on your site. GTM setup for flexible tag management without needing a developer. Conversion tracking for Google Ads, forms, calls and all other actions that matter to your business."
+        }
+      ],
+      "features": [
+        "Google Analytics 4 setup and configuration",
+        "Google Tag Manager implementation",
+        "Conversion tracking (forms, calls, purchases)",
+        "Integration with Google Ads for optimization",
+        "Custom reports and dashboards",
+        "E-commerce tracking (if needed)"
+      ],
+      "cta": "Request analytics setup"
     }
   },
   "portfolioPage": {
@@ -352,6 +419,154 @@
       "costPerConversion": "Cost per Conversion",
       "conversionRate": "Conversion Rate"
     }
+  },
+  "healthcarePage": {
+    "meta": {
+      "title": "Digital Marketing for Clinics | dolasads",
+      "description": "Website for clinics, Google Ads for dentists and doctors. More patients through Google search."
+    },
+    "heading": "Digital Marketing for Clinics and Medical Practices",
+    "subheading": "More patients through Google. Website, SEO and advertising tailored to the healthcare sector.",
+    "problemHeading": "Problems clinics face",
+    "problems": [
+      "Patients can't find you on Google",
+      "You don't have a website or it's outdated and doesn't inspire trust",
+      "Competitors are advertising while you wait for word of mouth",
+      "You don't know how many new patients you get each month"
+    ],
+    "solutionHeading": "How I solve this",
+    "solutions": [
+      "I build a professional website that inspires patient trust",
+      "I set up Google Ads campaigns that bring patients searching for your exact service",
+      "I optimize SEO so patients find you organically",
+      "I set up tracking so you know exactly how many patients come from the internet"
+    ],
+    "servicesHeading": "What the clinic package includes",
+    "services": [
+      "Professional website development for clinics",
+      "Google Ads campaigns for dentists, ophthalmologists, dermatologists...",
+      "SEO optimization for local searches",
+      "Google Business profile optimization",
+      "Conversion tracking (calls, appointments, forms)",
+      "Monthly performance reporting"
+    ],
+    "ctaHeading": "Schedule a free consultation",
+    "ctaText": "Contact me and we'll discuss how your clinic can get more patients through Google."
+  },
+  "pricingPage": {
+    "meta": {
+      "title": "Pricing | dolasads",
+      "description": "Digital service packages. Website, Google Ads, SEO and full service. Contact me for a quote."
+    },
+    "heading": "Pricing",
+    "subheading": "Choose the package that fits your business. Every offer is tailored to your needs.",
+    "contactCta": "Contact me for a quote",
+    "packages": [
+      {
+        "title": "Website Development",
+        "description": "A modern, fast website that turns visitors into clients.",
+        "features": [
+          "Responsive design for all devices",
+          "SEO foundation built from the start",
+          "Contact forms and calls to action",
+          "Optimized loading speed",
+          "Google Analytics integration"
+        ]
+      },
+      {
+        "title": "Google Ads",
+        "description": "Campaigns that bring real clients, not just clicks.",
+        "features": [
+          "Keyword research",
+          "Ad creation and testing",
+          "Conversion tracking",
+          "Monthly optimization",
+          "Monthly reports with results"
+        ]
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Organic growth of visibility on Google without paid ads.",
+        "features": [
+          "Technical SEO audit",
+          "Content and keyword optimization",
+          "On-page optimization",
+          "Position tracking",
+          "Monthly reporting"
+        ]
+      },
+      {
+        "title": "Full Service",
+        "description": "Website + Google Ads + SEO. Everything you need for digital presence.",
+        "features": [
+          "Everything from the Website package",
+          "Everything from the Google Ads package",
+          "Everything from the SEO package",
+          "Analytics and tracking setup",
+          "Priority support and communication"
+        ],
+        "highlighted": true
+      }
+    ]
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "About | dolasads",
+      "description": "Nikola Dolas. Digital marketing specialist with experience in Google Ads, SEO and website development. 4+ years in the industry."
+    },
+    "heading": "About Me",
+    "subheading": "Digital marketing specialist with agency experience.",
+    "intro": "My name is Nikola Dolas and I specialize in digital marketing with a focus on Google Ads, SEO and website development. Through years of agency work and working with my own clients, I've gained experience that I apply to every project.",
+    "experienceHeading": "Work Experience",
+    "experiences": [
+      {
+        "role": "Digital Account Executive",
+        "company": "Media House RS",
+        "period": "Aug 2025 — present",
+        "description": "Managing digital campaigns, media buying, account management and digital strategy for clients across various industries."
+      },
+      {
+        "role": "Ad Operations Manager",
+        "company": "Telegraf Media Group",
+        "period": "Jun 2023 — Aug 2025",
+        "description": "Programmatic advertising, header bidding and optimization of digital advertising revenue."
+      },
+      {
+        "role": "Traffic Manager",
+        "company": "Telegraf Media Group",
+        "period": "Oct 2021 — Jun 2023",
+        "description": "Campaign management, client communication and optimization of digital advertising performance."
+      }
+    ],
+    "educationHeading": "Education",
+    "education": {
+      "school": "ITS — Information Technology School",
+      "degree": "Bachelor's degree, E-Commerce",
+      "period": "2018 — 2022"
+    },
+    "certificationsHeading": "Certifications",
+    "certifications": [
+      {
+        "name": "Google Ads Display Certification",
+        "issuer": "Google Skillshop",
+        "date": "Nov 2025",
+        "id": "166963889"
+      },
+      {
+        "name": "Google Ads Search Certification",
+        "issuer": "Google Skillshop",
+        "date": "Nov 2025",
+        "id": "166961053"
+      }
+    ],
+    "highlightsHeading": "Key Skills",
+    "highlights": [
+      "4+ years in digital marketing",
+      "Managing budgets of 300,000+ EUR per year",
+      "Google Ads certified specialist",
+      "Experience with programmatic advertising",
+      "From traffic manager to account executive"
+    ]
   },
   "common": {
     "backToServices": "Back to services",

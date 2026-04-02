@@ -25,6 +25,15 @@ export default function Footer() {
           <Link href="/portfolio" className="transition hover:text-white">
             {tNav("portfolio")}
           </Link>
+          <Link href="/cenovnik" className="transition hover:text-white">
+            {tNav("pricing")}
+          </Link>
+          <Link href="/o-meni" className="transition hover:text-white">
+            {tNav("about")}
+          </Link>
+          <Link href="/za-ordinacije" className="transition hover:text-white">
+            {tNav("forClinics")}
+          </Link>
           <a
             href="mailto:nikola@dolasads.com"
             className="transition hover:text-white"

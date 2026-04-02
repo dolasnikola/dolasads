@@ -35,6 +35,8 @@ export default function Navbar() {
   const navLinks = [
     { href: "/usluge" as const, label: t("services") },
     { href: "/portfolio" as const, label: t("portfolio") },
+    { href: "/cenovnik" as const, label: t("pricing") },
+    { href: "/o-meni" as const, label: t("about") },
   ];
 
   const isActive = (href: string) => pathname.startsWith(href);

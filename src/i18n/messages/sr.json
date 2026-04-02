@@ -6,7 +6,10 @@
   "nav": {
     "cta": "Kontaktiraj me",
     "services": "Usluge",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "pricing": "Cenovnik",
+    "about": "O meni",
+    "forClinics": "Za ordinacije"
   },
   "hero": {
     "headline": "Od nule do prvih klijenata. Kroz Google.",
@@ -140,6 +143,16 @@
         "slug": "landing-stranice",
         "title": "Kreiranje landing stranica",
         "description": "Landing stranice dizajnirane za konverzije. Svaki element služi jednom cilju: da posetioci postanu klijenti."
+      },
+      {
+        "slug": "digitalni-marketing",
+        "title": "Digitalni marketing",
+        "description": "Kompletna digitalna strategija za tvoj biznis. Od planiranja do realizacije, sve usluge na jednom mestu."
+      },
+      {
+        "slug": "analitika-i-tracking",
+        "title": "Analitika i tracking",
+        "description": "Google Analytics 4, Google Tag Manager i praćenje konverzija. Precizni podaci za pametne odluke."
       }
     ]
   },
@@ -278,6 +291,60 @@
         "Praćenje konverzija integrisano"
       ],
       "cta": "Zatraži ponudu za landing stranicu"
+    },
+    "digitalni-marketing": {
+      "meta": {
+        "title": "Digitalni marketing | dolasads",
+        "description": "Kompletna digitalna strategija za tvoj biznis. Google Ads, SEO, izrada sajta, analitika. Sve na jednom mestu."
+      },
+      "heroTitle": "Digitalni marketing",
+      "heroSubtitle": "Kompletna digitalna strategija za rast tvog biznisa.",
+      "sections": [
+        {
+          "heading": "Sve digitalne usluge na jednom mestu",
+          "content": "Digitalni marketing nije samo jedan kanal. To je strategija koja objedinjuje sajt, SEO, plaćeno oglašavanje i analitiku u celinu koja donosi rezultate. Umesto da koordinišeš više ljudi, dobijaš jednog stručnjaka koji pokriva sve."
+        },
+        {
+          "heading": "Pristup koji funkcioniše",
+          "content": "Počinjem od analize tvog biznisa i ciljne grupe. Na osnovu toga kreiram strategiju koja uključuje pravi miks kanala. Svaki dinar budžeta ide tamo gde donosi najveći povraćaj."
+        }
+      ],
+      "features": [
+        "Izrada digitalne strategije",
+        "Google Ads kampanje i upravljanje",
+        "SEO optimizacija i sadržaj",
+        "Izrada sajta optimizovanog za konverzije",
+        "Analitika i praćenje rezultata",
+        "Mesečno izveštavanje i optimizacija"
+      ],
+      "cta": "Zatraži ponudu za digitalni marketing"
+    },
+    "analitika-i-tracking": {
+      "meta": {
+        "title": "Analitika i tracking | dolasads",
+        "description": "Google Analytics 4 setup, Google Tag Manager implementacija i praćenje konverzija. Precizni podaci za pametne poslovne odluke."
+      },
+      "heroTitle": "Analitika i tracking",
+      "heroSubtitle": "Precizni podaci za pametne poslovne odluke.",
+      "sections": [
+        {
+          "heading": "Zašto su ti podaci važni",
+          "content": "Bez praćenja podataka, marketinški budžet je pogađanje. Postavljam Google Analytics 4 i Google Tag Manager tako da tačno znaš odakle dolaze tvoji klijenti, šta rade na sajtu i koliko te košta svaka konverzija."
+        },
+        {
+          "heading": "Šta postavljam",
+          "content": "Kompletna implementacija GA4 sa praćenjem svih važnih događaja na sajtu. GTM setup za fleksibilno upravljanje tagovima bez potrebe za programerom. Praćenje konverzija za Google Ads, forme, pozive i sve ostale akcije koje su važne za tvoj biznis."
+        }
+      ],
+      "features": [
+        "Google Analytics 4 setup i konfiguracija",
+        "Google Tag Manager implementacija",
+        "Praćenje konverzija (forme, pozivi, kupovine)",
+        "Povezivanje sa Google Ads za optimizaciju",
+        "Prilagođeni izveštaji i dashboardovi",
+        "E-commerce tracking (ako je potrebno)"
+      ],
+      "cta": "Zatraži setup analitike"
     }
   },
   "portfolioPage": {
@@ -352,6 +419,154 @@
       "costPerConversion": "Cena po konverziji",
       "conversionRate": "Stopa konverzije"
     }
+  },
+  "healthcarePage": {
+    "meta": {
+      "title": "Digitalni marketing za ordinacije | dolasads",
+      "description": "Sajt za ordinaciju, Google Ads za stomatologe i lekare. Više pacijenata kroz Google pretragu."
+    },
+    "heading": "Digitalni marketing za ordinacije i klinike",
+    "subheading": "Više pacijenata kroz Google. Sajt, SEO i oglašavanje prilagođeno zdravstvenom sektoru.",
+    "problemHeading": "Problemi koje ordinacije imaju",
+    "problems": [
+      "Pacijenti te ne mogu naći na Google-u",
+      "Nemaš sajt ili je zastareo i ne uliva poverenje",
+      "Konkurencija se oglašava, a ti čekaš da te neko preporuči",
+      "Ne znaš koliko novih pacijenata dobijaš mesečno"
+    ],
+    "solutionHeading": "Kako to rešavam",
+    "solutions": [
+      "Pravim profesionalan sajt koji uliva poverenje pacijentima",
+      "Postavljam Google Ads kampanje koje dovode pacijente koji traže baš tvoju uslugu",
+      "Optimizujem SEO tako da te pacijenti nađu organskim putem",
+      "Postavljam praćenje tako da tačno znaš koliko pacijenata dolazi sa interneta"
+    ],
+    "servicesHeading": "Šta uključuje paket za ordinacije",
+    "services": [
+      "Izrada profesionalnog sajta za ordinaciju",
+      "Google Ads kampanje za stomatologe, oftalmologe, dermatologe...",
+      "SEO optimizacija za lokalne pretrage",
+      "Google Business profil optimizacija",
+      "Praćenje konverzija (pozivi, zakazivanja, forme)",
+      "Mesečno izveštavanje o rezultatima"
+    ],
+    "ctaHeading": "Zakaži besplatnu konsultaciju",
+    "ctaText": "Kontaktiraj me i razgovaraćemo o tome kako da tvoja ordinacija dobije više pacijenata kroz Google."
+  },
+  "pricingPage": {
+    "meta": {
+      "title": "Cenovnik | dolasads",
+      "description": "Paketi digitalnih usluga. Sajt, Google Ads, SEO i kompletna usluga. Kontaktiraj me za ponudu."
+    },
+    "heading": "Cenovnik",
+    "subheading": "Izaberi paket koji odgovara tvom biznisu. Svaka ponuda je prilagođena tvojim potrebama.",
+    "contactCta": "Kontaktiraj me za ponudu",
+    "packages": [
+      {
+        "title": "Izrada sajta",
+        "description": "Moderan, brz sajt koji pretvara posetioce u klijente.",
+        "features": [
+          "Responzivan dizajn za sve uređaje",
+          "SEO osnova ugrađena od starta",
+          "Kontakt forma i pozivi na akciju",
+          "Optimizovana brzina učitavanja",
+          "Povezivanje sa Google analitikom"
+        ]
+      },
+      {
+        "title": "Google Ads",
+        "description": "Kampanje koje dovode prave klijente, ne samo klikove.",
+        "features": [
+          "Istraživanje ključnih reči",
+          "Kreiranje i testiranje oglasa",
+          "Praćenje konverzija",
+          "Mesečna optimizacija",
+          "Mesečni izveštaji sa rezultatima"
+        ]
+      },
+      {
+        "title": "SEO optimizacija",
+        "description": "Organski rast vidljivosti na Google-u bez plaćenih reklama.",
+        "features": [
+          "Tehnička SEO revizija",
+          "Optimizacija sadržaja i ključnih reči",
+          "On-page optimizacija",
+          "Praćenje pozicija",
+          "Mesečno izveštavanje"
+        ]
+      },
+      {
+        "title": "Kompletna usluga",
+        "description": "Sajt + Google Ads + SEO. Sve što ti treba za digitalno prisustvo.",
+        "features": [
+          "Sve iz paketa Izrada sajta",
+          "Sve iz paketa Google Ads",
+          "Sve iz paketa SEO optimizacija",
+          "Analitika i tracking setup",
+          "Prioritetna podrška i komunikacija"
+        ],
+        "highlighted": true
+      }
+    ]
+  },
+  "aboutPage": {
+    "meta": {
+      "title": "O meni | dolasads",
+      "description": "Nikola Dolas. Digitalni marketing stručnjak sa iskustvom u Google Ads, SEO i izradi sajtova. 4+ godine u industriji."
+    },
+    "heading": "O meni",
+    "subheading": "Digitalni marketing stručnjak sa agencijskim iskustvom.",
+    "intro": "Zovem se Nikola Dolas i bavim se digitalnim marketingom sa fokusom na Google Ads, SEO i izradu sajtova. Kroz godine rada u agenciji i sa sopstvenim klijentima, stekao sam iskustvo koje primenjujem na svaki projekat.",
+    "experienceHeading": "Radno iskustvo",
+    "experiences": [
+      {
+        "role": "Digital Account Executive",
+        "company": "Media House RS",
+        "period": "Avg 2025 — danas",
+        "description": "Upravljanje digitalnim kampanjama, media buying, account management i digitalna strategija za klijente iz različitih industrija."
+      },
+      {
+        "role": "Ad Operations Manager",
+        "company": "Telegraf Media Group",
+        "period": "Jun 2023 — avg 2025",
+        "description": "Programmatic advertising, header bidding i optimizacija prihoda od digitalnog oglašavanja."
+      },
+      {
+        "role": "Traffic Manager",
+        "company": "Telegraf Media Group",
+        "period": "Okt 2021 — jun 2023",
+        "description": "Upravljanje kampanjama, komunikacija sa klijentima i optimizacija performansi digitalnog oglašavanja."
+      }
+    ],
+    "educationHeading": "Obrazovanje",
+    "education": {
+      "school": "ITS — Visoka škola strukovnih studija za IT",
+      "degree": "Bachelor's degree, E-Commerce",
+      "period": "2018 — 2022"
+    },
+    "certificationsHeading": "Sertifikati",
+    "certifications": [
+      {
+        "name": "Google Ads Display Certification",
+        "issuer": "Google Skillshop",
+        "date": "Nov 2025",
+        "id": "166963889"
+      },
+      {
+        "name": "Google Ads Search Certification",
+        "issuer": "Google Skillshop",
+        "date": "Nov 2025",
+        "id": "166961053"
+      }
+    ],
+    "highlightsHeading": "Ključne veštine",
+    "highlights": [
+      "4+ godine u digitalnom marketingu",
+      "Upravljanje budžetima od 300.000+ EUR godišnje",
+      "Google Ads sertifikovan stručnjak",
+      "Iskustvo sa programmatic advertising",
+      "Od traffic managera do account executive-a"
+    ]
   },
   "common": {
     "backToServices": "Nazad na usluge",

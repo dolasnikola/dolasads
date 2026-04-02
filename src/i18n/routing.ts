@@ -14,6 +14,18 @@ export const routing = defineRouting({
       en: "/services/[slug]",
     },
     "/portfolio": "/portfolio",
+    "/za-ordinacije": {
+      sr: "/za-ordinacije",
+      en: "/for-clinics",
+    },
+    "/cenovnik": {
+      sr: "/cenovnik",
+      en: "/pricing",
+    },
+    "/o-meni": {
+      sr: "/o-meni",
+      en: "/about",
+    },
   },
 });
 

@@ -13,6 +13,8 @@ const SERVICE_SLUGS = [
   "seo-optimizacija",
   "optimizacija-sajta",
   "landing-stranice",
+  "digitalni-marketing",
+  "analitika-i-tracking",
 ] as const;
 
 type ServiceSlug = (typeof SERVICE_SLUGS)[number];
