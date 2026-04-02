@@ -28,6 +28,12 @@ export default function ContactForm() {
     const form = new FormData(e.currentTarget);
     if (validate(form)) {
       handleSubmit(form);
+      if (typeof window !== "undefined" && window.dataLayer) {
+        window.dataLayer.push({
+          event: "form_submit",
+          form_name: "contact",
+        });
+      }
     }
   };
 
