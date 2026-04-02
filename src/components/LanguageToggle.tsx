@@ -1,18 +1,22 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 export default function LanguageToggle() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
 
   const toggleLocale = () => {
     const newLocale = locale === "sr" ? "en" : "sr";
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    router.push(segments.join("/"));
+    router.replace(
+      // @ts-expect-error -- pathname and params always come from the current route
+      { pathname, params },
+      { locale: newLocale }
+    );
   };
 
   return (

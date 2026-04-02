@@ -4,7 +4,9 @@
     "description": "Kompletan digitalni setup za tvoj biznis. Sajt, SEO, Google Ads. Od nule do prvih klijenata."
   },
   "nav": {
-    "cta": "Kontaktiraj me"
+    "cta": "Kontaktiraj me",
+    "services": "Usluge",
+    "portfolio": "Portfolio"
   },
   "hero": {
     "headline": "Od nule do prvih klijenata. Kroz Google.",
@@ -105,6 +107,245 @@
     "invalidEmail": "Unesi validnu email adresu",
     "success": "Hvala! Javim ti se uskoro.",
     "error": "Došlo je do greške. Pokušaj ponovo."
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Usluge | dolasads",
+      "description": "Google Ads upravljanje, izrada sajtova, SEO optimizacija, optimizacija sajta i kreiranje landing stranica. Sve što ti treba za digitalno prisustvo."
+    },
+    "heading": "Sve usluge",
+    "subheading": "Kompletan digitalni setup za tvoj biznis. Od sajta do prvih klijenata kroz Google.",
+    "items": [
+      {
+        "slug": "google-ads",
+        "title": "Google Ads upravljanje",
+        "description": "Postavljam i optimizujem Google Ads kampanje koje donose rezultate. Od istraživanja ključnih reči do praćenja konverzija."
+      },
+      {
+        "slug": "izrada-sajtova",
+        "title": "Izrada web sajtova",
+        "description": "Moderan, brz i responzivan sajt koji ostavlja jak prvi utisak i pretvara posetioce u klijente."
+      },
+      {
+        "slug": "seo-optimizacija",
+        "title": "SEO optimizacija",
+        "description": "Tehničko i sadržajno SEO pozicioniranje koje povećava organsku vidljivost tvog sajta na Google-u."
+      },
+      {
+        "slug": "optimizacija-sajta",
+        "title": "Optimizacija sajta",
+        "description": "Ubrzanje sajta, poboljšanje korisničkog iskustva i Core Web Vitals rezultata za bolje rangiranje."
+      },
+      {
+        "slug": "landing-stranice",
+        "title": "Kreiranje landing stranica",
+        "description": "Landing stranice dizajnirane za konverzije. Svaki element služi jednom cilju: da posetioci postanu klijenti."
+      }
+    ]
+  },
+  "serviceDetail": {
+    "google-ads": {
+      "meta": {
+        "title": "Google Ads upravljanje | dolasads",
+        "description": "Profesionalno upravljanje Google Ads kampanjama. Od istraživanja ključnih reči do optimizacije konverzija."
+      },
+      "heroTitle": "Google Ads upravljanje",
+      "heroSubtitle": "Kampanje koje donose rezultate, ne samo klikove.",
+      "sections": [
+        {
+          "heading": "Kako pristupam Google Ads kampanjama",
+          "content": "Svaku kampanju postavljam od nule sa fokusom na konverzije. Detaljna analiza ključnih reči, kreiranje oglasa koji privlače prave klijente i kontinuirana optimizacija svake kampanje."
+        },
+        {
+          "heading": "Šta dobijaš",
+          "content": "Potpun setup Google Ads naloga, istraživanje ključnih reči, kreiranje i testiranje oglasa, praćenje konverzija, mesečne izveštaje i konstantnu optimizaciju za maksimalan povraćaj uloženog."
+        }
+      ],
+      "features": [
+        "Detaljna analiza ključnih reči i konkurencije",
+        "Kreiranje i A/B testiranje oglasa",
+        "Postavljanje praćenja konverzija",
+        "Mesečna optimizacija i izveštavanje",
+        "Remarketing kampanje",
+        "Google Ads sertifikovan stručnjak"
+      ],
+      "cta": "Zatraži ponudu za Google Ads"
+    },
+    "izrada-sajtova": {
+      "meta": {
+        "title": "Izrada web sajtova | dolasads",
+        "description": "Moderan, brz i responzivan sajt optimizovan za konverzije. Dizajn koji pretvara posetioce u klijente."
+      },
+      "heroTitle": "Izrada web sajtova",
+      "heroSubtitle": "Sajt koji radi za tebe 24/7.",
+      "sections": [
+        {
+          "heading": "Sajtovi koji konvertuju",
+          "content": "Ne pravim samo lepe sajtove. Pravim sajtove koji imaju jasan cilj: da pretvore posetioce u klijente. Svaki element je promišljen, od strukture do poziva na akciju."
+        },
+        {
+          "heading": "Tehnologija i performanse",
+          "content": "Koristim moderne tehnologije za brze, responzivne sajtove koji se odlično rangiraju na Google-u. Mobilni prikaz je prioritet jer većina poseta dolazi sa telefona."
+        }
+      ],
+      "features": [
+        "Responzivan dizajn za sve uređaje",
+        "Optimizovana brzina učitavanja",
+        "SEO osnova ugrađena od starta",
+        "Integracija sa analitikom i praćenjem",
+        "Kontakt forme i pozivi na akciju",
+        "Moderan dizajn prilagođen tvom biznisu"
+      ],
+      "cta": "Zatraži ponudu za izradu sajta"
+    },
+    "seo-optimizacija": {
+      "meta": {
+        "title": "SEO optimizacija | dolasads",
+        "description": "Tehničko i sadržajno SEO pozicioniranje koje povećava organsku vidljivost tvog sajta na Google-u."
+      },
+      "heroTitle": "SEO optimizacija",
+      "heroSubtitle": "Organski rast vidljivosti na Google-u.",
+      "sections": [
+        {
+          "heading": "Tehničko i sadržajno SEO",
+          "content": "Radim kompletnu tehničku optimizaciju sajta i kreiram strategiju sadržaja koja privlači organski saobraćaj. Cilj je dugoročna vidljivost bez plaćenih reklama."
+        },
+        {
+          "heading": "Pristup koji daje rezultate",
+          "content": "Analiza trenutnog stanja, istraživanje ključnih reči koje tvoja ciljna grupa traži, optimizacija stranica i praćenje pozicija. Sve merljivo i transparentno."
+        }
+      ],
+      "features": [
+        "Tehnička SEO revizija sajta",
+        "Istraživanje ključnih reči",
+        "On-page optimizacija",
+        "Optimizacija meta tagova i strukture",
+        "Praćenje pozicija i izveštavanje",
+        "Strategija sadržaja"
+      ],
+      "cta": "Zatraži SEO analizu"
+    },
+    "optimizacija-sajta": {
+      "meta": {
+        "title": "Optimizacija sajta | dolasads",
+        "description": "Ubrzanje sajta, poboljšanje korisničkog iskustva i Core Web Vitals rezultata za bolje rangiranje."
+      },
+      "heroTitle": "Optimizacija sajta",
+      "heroSubtitle": "Brži sajt znači više konverzija.",
+      "sections": [
+        {
+          "heading": "Zašto je brzina važna",
+          "content": "Svaka sekunda čekanja smanjuje konverzije. Optimizujem brzinu učitavanja, korisničko iskustvo i Core Web Vitals rezultate koji direktno utiču na rangiranje u Google-u."
+        },
+        {
+          "heading": "Šta optimizujem",
+          "content": "Analiza trenutnih performansi, optimizacija slika i resursa, poboljšanje vremena učitavanja, mobilnog iskustva i interaktivnosti sajta."
+        }
+      ],
+      "features": [
+        "Core Web Vitals optimizacija",
+        "Kompresija i optimizacija slika",
+        "Poboljšanje brzine učitavanja",
+        "Mobilna optimizacija",
+        "Analiza korisničkog iskustva",
+        "Pre i posle izveštaji performansi"
+      ],
+      "cta": "Zatraži analizu performansi sajta"
+    },
+    "landing-stranice": {
+      "meta": {
+        "title": "Kreiranje landing stranica | dolasads",
+        "description": "Landing stranice dizajnirane za konverzije. Svaki element služi jednom cilju: da posetioci postanu klijenti."
+      },
+      "heroTitle": "Kreiranje landing stranica",
+      "heroSubtitle": "Stranice koje pretvaraju klikove u klijente.",
+      "sections": [
+        {
+          "heading": "Fokus na konverzije",
+          "content": "Landing stranica ima jedan cilj: da posetioci preduzmu akciju. Svaki element je dizajniran da vodi ka tom cilju, od naslova do poziva na akciju."
+        },
+        {
+          "heading": "Zašto ti treba landing stranica",
+          "content": "Kada pokreneš Google Ads kampanju, posetioci moraju da dođu na stranicu koja ih ubedi da te kontaktiraju. Generička stranica to ne radi. Landing stranica to radi."
+        }
+      ],
+      "features": [
+        "Dizajn fokusiran na jednu konverziju",
+        "A/B testiranje elemenata",
+        "Optimizovana za Google Ads kampanje",
+        "Brzo učitavanje na svim uređajima",
+        "Jasni pozivi na akciju",
+        "Praćenje konverzija integrisano"
+      ],
+      "cta": "Zatraži ponudu za landing stranicu"
+    }
+  },
+  "portfolioPage": {
+    "meta": {
+      "title": "Portfolio | dolasads",
+      "description": "Pogledaj realne rezultate mojih projekata. Od izrade sajtova do Google Ads kampanja sa merljivim rezultatima."
+    },
+    "heading": "Portfolio",
+    "subheading": "Realni projekti, realni rezultati.",
+    "intro": "Agencijski posao podrazumeva upravljanje budžetima od preko 300.000 EUR godišnje u Google Ads. Ta znanja i iskustvo presipam u lokalne biznise, sa istim pristupom i istom pažnjom.",
+    "projects": [
+      {
+        "id": "selidbe-beograd",
+        "title": "Selidbe Beograd",
+        "category": "Sajt + Google Ads",
+        "description": "Kompletan digitalni setup za lokalnu firmu za selidbe u Beogradu. Izrada sajta od nule i pokretanje Google Ads kampanje sa potpuno novim nalogom. Ovo je najbolji dokaz da moj pristup funkcioniše u realnim uslovima, sa realnim budžetom.",
+        "url": "https://dolasnikola.github.io/selidbebeograd/",
+        "features": [
+          "Izrada kompletnog sajta od nule",
+          "Google Ads kampanja sa novim nalogom",
+          "Praćenje konverzija i optimizacija",
+          "Setup za lokalni biznis u Beogradu"
+        ]
+      },
+      {
+        "id": "different-event",
+        "title": "Different Event",
+        "category": "Izrada sajta",
+        "description": "Elegantan sajt za firmu koja se bavi iznajmljivanjem opreme za događaje. Profesionalan dizajn sa fokusom na prikaz usluga i jednostavan kontakt.",
+        "url": "https://dolasnikola.github.io/differentevent/",
+        "features": [
+          "Elegantan dizajn prilagođen brendu",
+          "Prikaz kompletne ponude opreme",
+          "Integracija sa društvenim mrežama",
+          "Optimizovano korisničko iskustvo"
+        ]
+      }
+    ],
+    "adsResultsHeading": "Rezultati Google Ads kampanje",
+    "adsResultsSubheading": "Setup od nule. Potpuno novi Google Ads nalog. Lokalni biznis u Beogradu.",
+    "viewSite": "Pogledaj sajt",
+    "stats": {
+      "period": "16.02. — 31.03.2026",
+      "impressions": "8.485",
+      "ctr": "11,75%",
+      "clicks": "~997",
+      "spend": "900 EUR",
+      "cpc": "~0,90 EUR",
+      "conversions": "328",
+      "costPerConversion": "~2,74 EUR",
+      "conversionRate": "~32,9%"
+    },
+    "statLabels": {
+      "period": "Period",
+      "impressions": "Impresije",
+      "ctr": "CTR",
+      "clicks": "Klikovi",
+      "spend": "Potrošnja",
+      "cpc": "CPC",
+      "conversions": "Konverzije",
+      "costPerConversion": "Cena po konverziji",
+      "conversionRate": "Stopa konverzije"
+    }
+  },
+  "common": {
+    "backToServices": "Nazad na usluge",
+    "ctaHeading": "Spreman da kreneš?",
+    "ctaSubheading": "Kontaktiraj me i pokrećemo tvoj projekat."
   },
   "footer": {
     "copyright": "© 2026 dolasads"

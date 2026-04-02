@@ -4,7 +4,9 @@
     "description": "Complete digital setup for your business. Website, SEO, Google Ads. From zero to first clients."
   },
   "nav": {
-    "cta": "Contact me"
+    "cta": "Contact me",
+    "services": "Services",
+    "portfolio": "Portfolio"
   },
   "hero": {
     "headline": "From zero to first clients. Through Google.",
@@ -105,6 +107,245 @@
     "invalidEmail": "Enter a valid email address",
     "success": "Thank you! I'll get back to you soon.",
     "error": "Something went wrong. Please try again."
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Services | dolasads",
+      "description": "Google Ads management, website development, SEO optimization, site optimization and landing page creation. Everything you need for digital presence."
+    },
+    "heading": "All Services",
+    "subheading": "Complete digital setup for your business. From website to first clients through Google.",
+    "items": [
+      {
+        "slug": "google-ads",
+        "title": "Google Ads Management",
+        "description": "I set up and optimize Google Ads campaigns that deliver results. From keyword research to conversion tracking."
+      },
+      {
+        "slug": "izrada-sajtova",
+        "title": "Website Development",
+        "description": "A modern, fast, responsive website that makes a strong first impression and turns visitors into clients."
+      },
+      {
+        "slug": "seo-optimizacija",
+        "title": "SEO Optimization",
+        "description": "Technical and content SEO that increases your site's organic visibility on Google."
+      },
+      {
+        "slug": "optimizacija-sajta",
+        "title": "Site Optimization",
+        "description": "Speed optimization, improved user experience, and Core Web Vitals scores for better ranking."
+      },
+      {
+        "slug": "landing-stranice",
+        "title": "Landing Page Creation",
+        "description": "Landing pages designed for conversions. Every element serves one goal: turning visitors into clients."
+      }
+    ]
+  },
+  "serviceDetail": {
+    "google-ads": {
+      "meta": {
+        "title": "Google Ads Management | dolasads",
+        "description": "Professional Google Ads campaign management. From keyword research to conversion optimization."
+      },
+      "heroTitle": "Google Ads Management",
+      "heroSubtitle": "Campaigns that deliver results, not just clicks.",
+      "sections": [
+        {
+          "heading": "How I approach Google Ads campaigns",
+          "content": "I set up every campaign from scratch with a focus on conversions. Detailed keyword analysis, creating ads that attract the right clients, and continuous optimization of every campaign."
+        },
+        {
+          "heading": "What you get",
+          "content": "Complete Google Ads account setup, keyword research, ad creation and testing, conversion tracking, monthly reports, and constant optimization for maximum return on investment."
+        }
+      ],
+      "features": [
+        "Detailed keyword and competitor analysis",
+        "Ad creation and A/B testing",
+        "Conversion tracking setup",
+        "Monthly optimization and reporting",
+        "Remarketing campaigns",
+        "Google Ads certified specialist"
+      ],
+      "cta": "Get a Google Ads quote"
+    },
+    "izrada-sajtova": {
+      "meta": {
+        "title": "Website Development | dolasads",
+        "description": "Modern, fast, responsive website optimized for conversions. Design that turns visitors into clients."
+      },
+      "heroTitle": "Website Development",
+      "heroSubtitle": "A website that works for you 24/7.",
+      "sections": [
+        {
+          "heading": "Websites that convert",
+          "content": "I don't just build pretty websites. I build websites with a clear goal: to turn visitors into clients. Every element is carefully considered, from structure to calls to action."
+        },
+        {
+          "heading": "Technology and performance",
+          "content": "I use modern technologies for fast, responsive websites that rank well on Google. Mobile display is a priority since most visits come from phones."
+        }
+      ],
+      "features": [
+        "Responsive design for all devices",
+        "Optimized loading speed",
+        "SEO foundation built from the start",
+        "Analytics and tracking integration",
+        "Contact forms and calls to action",
+        "Modern design tailored to your business"
+      ],
+      "cta": "Get a website development quote"
+    },
+    "seo-optimizacija": {
+      "meta": {
+        "title": "SEO Optimization | dolasads",
+        "description": "Technical and content SEO that increases your site's organic visibility on Google."
+      },
+      "heroTitle": "SEO Optimization",
+      "heroSubtitle": "Organic growth of visibility on Google.",
+      "sections": [
+        {
+          "heading": "Technical and content SEO",
+          "content": "I perform complete technical optimization of your site and create a content strategy that attracts organic traffic. The goal is long term visibility without paid ads."
+        },
+        {
+          "heading": "An approach that delivers results",
+          "content": "Analysis of current state, research of keywords your target audience searches for, page optimization, and position tracking. Everything measurable and transparent."
+        }
+      ],
+      "features": [
+        "Technical SEO audit",
+        "Keyword research",
+        "On-page optimization",
+        "Meta tags and structure optimization",
+        "Position tracking and reporting",
+        "Content strategy"
+      ],
+      "cta": "Request an SEO analysis"
+    },
+    "optimizacija-sajta": {
+      "meta": {
+        "title": "Site Optimization | dolasads",
+        "description": "Speed optimization, improved user experience, and Core Web Vitals scores for better ranking."
+      },
+      "heroTitle": "Site Optimization",
+      "heroSubtitle": "A faster site means more conversions.",
+      "sections": [
+        {
+          "heading": "Why speed matters",
+          "content": "Every second of waiting reduces conversions. I optimize loading speed, user experience, and Core Web Vitals scores that directly affect Google ranking."
+        },
+        {
+          "heading": "What I optimize",
+          "content": "Analysis of current performance, image and resource optimization, improvement of loading times, mobile experience, and site interactivity."
+        }
+      ],
+      "features": [
+        "Core Web Vitals optimization",
+        "Image compression and optimization",
+        "Loading speed improvement",
+        "Mobile optimization",
+        "User experience analysis",
+        "Before and after performance reports"
+      ],
+      "cta": "Request a site performance analysis"
+    },
+    "landing-stranice": {
+      "meta": {
+        "title": "Landing Page Creation | dolasads",
+        "description": "Landing pages designed for conversions. Every element serves one goal: turning visitors into clients."
+      },
+      "heroTitle": "Landing Page Creation",
+      "heroSubtitle": "Pages that turn clicks into clients.",
+      "sections": [
+        {
+          "heading": "Focus on conversions",
+          "content": "A landing page has one goal: for visitors to take action. Every element is designed to lead to that goal, from headline to call to action."
+        },
+        {
+          "heading": "Why you need a landing page",
+          "content": "When you launch a Google Ads campaign, visitors need to land on a page that convinces them to contact you. A generic page doesn't do that. A landing page does."
+        }
+      ],
+      "features": [
+        "Design focused on a single conversion",
+        "A/B testing of elements",
+        "Optimized for Google Ads campaigns",
+        "Fast loading on all devices",
+        "Clear calls to action",
+        "Conversion tracking integrated"
+      ],
+      "cta": "Get a landing page quote"
+    }
+  },
+  "portfolioPage": {
+    "meta": {
+      "title": "Portfolio | dolasads",
+      "description": "See real results from my projects. From website creation to Google Ads campaigns with measurable results."
+    },
+    "heading": "Portfolio",
+    "subheading": "Real projects, real results.",
+    "intro": "My agency work involves managing budgets of over 300,000 EUR per year in Google Ads. I channel that knowledge and experience into local businesses, with the same approach and the same attention to detail.",
+    "projects": [
+      {
+        "id": "selidbe-beograd",
+        "title": "Selidbe Beograd",
+        "category": "Website + Google Ads",
+        "description": "Complete digital setup for a local moving company in Belgrade. Website built from scratch and Google Ads campaign launched with a brand new account. This is the best proof that my approach works in real conditions, with a real budget.",
+        "url": "https://dolasnikola.github.io/selidbebeograd/",
+        "features": [
+          "Complete website built from scratch",
+          "Google Ads campaign with a new account",
+          "Conversion tracking and optimization",
+          "Local business setup in Belgrade"
+        ]
+      },
+      {
+        "id": "different-event",
+        "title": "Different Event",
+        "category": "Website Development",
+        "description": "An elegant website for an event equipment rental company. Professional design focused on showcasing services and easy contact.",
+        "url": "https://dolasnikola.github.io/differentevent/",
+        "features": [
+          "Elegant design tailored to the brand",
+          "Complete equipment catalog display",
+          "Social media integration",
+          "Optimized user experience"
+        ]
+      }
+    ],
+    "adsResultsHeading": "Google Ads Campaign Results",
+    "adsResultsSubheading": "Setup from scratch. Brand new Google Ads account. Local business in Belgrade.",
+    "viewSite": "View website",
+    "stats": {
+      "period": "Feb 16 — Mar 31, 2026",
+      "impressions": "8,485",
+      "ctr": "11.75%",
+      "clicks": "~997",
+      "spend": "900 EUR",
+      "cpc": "~0.90 EUR",
+      "conversions": "328",
+      "costPerConversion": "~2.74 EUR",
+      "conversionRate": "~32.9%"
+    },
+    "statLabels": {
+      "period": "Period",
+      "impressions": "Impressions",
+      "ctr": "CTR",
+      "clicks": "Clicks",
+      "spend": "Ad Spend",
+      "cpc": "CPC",
+      "conversions": "Conversions",
+      "costPerConversion": "Cost per Conversion",
+      "conversionRate": "Conversion Rate"
+    }
+  },
+  "common": {
+    "backToServices": "Back to services",
+    "ctaHeading": "Ready to start?",
+    "ctaSubheading": "Contact me and let's get your project going."
   },
   "footer": {
     "copyright": "© 2026 dolasads"

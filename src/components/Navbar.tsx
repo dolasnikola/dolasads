@@ -1,14 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+import { Link, usePathname } from "@/i18n/navigation";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -16,10 +21,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  const handleCTA = () => {
     setMenuOpen(false);
+    if (isHome) {
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = `/${locale}#contact`;
+    }
   };
+
+  const navLinks = [
+    { href: "/usluge" as const, label: t("services") },
+    { href: "/portfolio" as const, label: t("portfolio") },
+  ];
+
+  const isActive = (href: string) => pathname.startsWith(href);
 
   return (
     <nav
@@ -30,19 +48,34 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4">
-        <Image
-          src="/logo-skracen.png"
-          alt="dolasads logo"
-          width={140}
-          height={36}
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/logo-skracen.png"
+            alt="dolasads logo"
+            width={140}
+            height={36}
+            priority
+          />
+        </Link>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`text-sm font-medium transition ${
+                isActive(link.href)
+                  ? "text-white"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <LanguageToggle />
           <button
-            onClick={scrollToContact}
+            onClick={handleCTA}
             className="rounded-lg bg-accent-blue px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-accent-blue/90"
           >
             {t("cta")}
@@ -52,7 +85,7 @@ export default function Navbar() {
         {/* Mobile: CTA always visible + hamburger */}
         <div className="flex items-center gap-3 md:hidden">
           <button
-            onClick={scrollToContact}
+            onClick={handleCTA}
             className="rounded-lg bg-accent-blue px-4 py-2 text-sm font-semibold text-white"
           >
             {t("cta")}
@@ -91,7 +124,23 @@ export default function Navbar() {
       {/* Mobile menu dropdown */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-navy/95 px-4 py-4 backdrop-blur-md md:hidden">
-          <LanguageToggle />
+          <div className="flex flex-col gap-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`text-sm font-medium transition ${
+                  isActive(link.href)
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <LanguageToggle />
+          </div>
         </div>
       )}
     </nav>
