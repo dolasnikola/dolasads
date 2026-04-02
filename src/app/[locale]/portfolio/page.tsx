@@ -41,21 +41,48 @@ export default async function PortfolioPage({
     features: string[];
   }[];
 
+  const industries = t.raw("agencyIndustries") as string[];
+
   return (
     <>
       <Navbar />
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
+      {/* Agency experience */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4">
-          {/* Intro text */}
           <FadeIn>
             <p className="mb-12 text-center text-lg leading-relaxed text-text-dark/70">
               {t("intro")}
             </p>
           </FadeIn>
 
-          {/* Projects */}
+          <FadeIn delay={0.1}>
+            <div className="rounded-xl bg-gray-50 p-8">
+              <h2 className="text-2xl font-bold text-text-dark">
+                {t("agencyHeading")}
+              </h2>
+              <p className="mt-3 text-text-dark/70">
+                {t("agencyDescription")}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {industries.map((industry) => (
+                  <span
+                    key={industry}
+                    className="rounded-full bg-navy/10 px-4 py-2 text-sm font-medium text-navy"
+                  >
+                    {industry}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-4xl px-4">
           <div className="space-y-12">
             {projects.map((project, i) => (
               <PortfolioCard
