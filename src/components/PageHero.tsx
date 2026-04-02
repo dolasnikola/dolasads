@@ -9,7 +9,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle }: PageHeroProps) {
   return (
-    <section className="bg-navy pt-32 pb-16 lg:pt-40 lg:pb-20">
+    <section className="bg-navy pt-28 pb-10 lg:pt-32 lg:pb-12">
       <div className="mx-auto max-w-6xl px-4 text-center">
         <FadeIn>
           <h1 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
