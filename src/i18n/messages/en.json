@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "dolasads | Digital Marketing & Google Ads",
+    "description": "Complete digital setup for your business. Website, SEO, Google Ads. From zero to first clients."
+  },
+  "nav": {
+    "cta": "Contact me"
+  },
+  "hero": {
+    "headline": "From zero to first clients. Through Google.",
+    "subheadline": "Complete digital setup for your business. Website, SEO, Google Ads. All in one place.",
+    "ctaPrimary": "Get a quote",
+    "ctaWhatsapp": "Message me on WhatsApp"
+  },
+  "trust": {
+    "campaigns": "150+ campaigns",
+    "certified": "Google Ads certified",
+    "experience": "5+ years experience"
+  },
+  "problemSolution": {
+    "heading": "You know you need a digital presence. But you don't know where to start.",
+    "problems": [
+      "You don't have a website and nobody can find you online",
+      "You have a site but no visitors",
+      "You're spending ad budget with no results"
+    ],
+    "solutions": [
+      "I build you a modern site optimized for conversions",
+      "I set up Google Ads campaigns that bring real clients",
+      "I optimize every penny for maximum return"
+    ]
+  },
+  "services": {
+    "heading": "What I do for you",
+    "items": [
+      {
+        "title": "Google Ads Management",
+        "description": "I set up and optimize Google Ads campaigns that deliver results. From keyword research to conversion tracking."
+      },
+      {
+        "title": "Website Development",
+        "description": "A modern, fast, responsive website that makes a strong first impression and turns visitors into clients."
+      },
+      {
+        "title": "SEO Optimization",
+        "description": "Technical and content SEO that increases your site's organic visibility on Google."
+      },
+      {
+        "title": "Site Optimization",
+        "description": "Speed optimization, improved user experience, and Core Web Vitals scores for better ranking."
+      },
+      {
+        "title": "Landing Page Creation",
+        "description": "Landing pages designed for conversions. Every element serves one goal: turning visitors into clients."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How does it work?",
+    "steps": [
+      {
+        "title": "Analysis",
+        "description": "I analyze your business, target audience, and competition"
+      },
+      {
+        "title": "Website Creation",
+        "description": "I build a website tailored to your business and optimized for conversions"
+      },
+      {
+        "title": "Google Ads Setup",
+        "description": "I set up campaigns that target the right people at the right time"
+      },
+      {
+        "title": "Conversions Arrive",
+        "description": "Your phone rings. Your inbox fills up. Your business grows."
+      }
+    ]
+  },
+  "socialProof": {
+    "stats": [
+      { "value": "150+", "label": "Campaigns launched" },
+      { "value": "3x", "label": "Average conversion growth" },
+      { "value": "98%", "label": "Satisfied clients" }
+    ]
+  },
+  "contact": {
+    "heading": "Ready to start?",
+    "subheading": "Fill out the form and I'll get back to you within 24h.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "interest": "What are you interested in?",
+    "interestOptions": [
+      "Google Ads",
+      "Website Development",
+      "SEO",
+      "Site Optimization",
+      "Landing Page",
+      "Full Service"
+    ],
+    "message": "Message",
+    "submit": "Send",
+    "whatsappAlt": "Or message me on WhatsApp",
+    "required": "This field is required",
+    "invalidEmail": "Enter a valid email address",
+    "success": "Thank you! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2026 dolasads"
+  }
+}

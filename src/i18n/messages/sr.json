@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "dolasads | Digitalni marketing i Google Ads",
+    "description": "Kompletan digitalni setup za tvoj biznis. Sajt, SEO, Google Ads. Od nule do prvih klijenata."
+  },
+  "nav": {
+    "cta": "Kontaktiraj me"
+  },
+  "hero": {
+    "headline": "Od nule do prvih klijenata. Kroz Google.",
+    "subheadline": "Kompletan digitalni setup za tvoj biznis. Sajt, SEO, Google Ads. Sve na jednom mestu.",
+    "ctaPrimary": "Zatraži ponudu",
+    "ctaWhatsapp": "Piši mi na WhatsApp"
+  },
+  "trust": {
+    "campaigns": "150+ kampanja",
+    "certified": "Google Ads sertifikovan",
+    "experience": "5+ godina iskustva"
+  },
+  "problemSolution": {
+    "heading": "Znaš da ti treba digitalno prisustvo. Ali ne znaš odakle da počneš.",
+    "problems": [
+      "Nemaš sajt i niko te ne može naći online",
+      "Imaš sajt ali nemaš posetioce",
+      "Trošiš budžet na reklame bez rezultata"
+    ],
+    "solutions": [
+      "Pravim ti moderan sajt optimizovan za konverzije",
+      "Postavljam Google Ads kampanje koje dovode prave klijente",
+      "Optimizujem svaki dinar da dobiješ maksimalan povraćaj"
+    ]
+  },
+  "services": {
+    "heading": "Šta sve radim za tebe",
+    "items": [
+      {
+        "title": "Google Ads upravljanje",
+        "description": "Postavljam i optimizujem Google Ads kampanje koje donose rezultate. Od istraživanja ključnih reči do praćenja konverzija."
+      },
+      {
+        "title": "Izrada web sajtova",
+        "description": "Moderan, brz i responzivan sajt koji ostavlja jak prvi utisak i pretvara posetioce u klijente."
+      },
+      {
+        "title": "SEO optimizacija",
+        "description": "Tehničko i sadržajno SEO pozicioniranje koje povećava organsku vidljivost tvog sajta na Google-u."
+      },
+      {
+        "title": "Optimizacija sajta",
+        "description": "Ubrzanje sajta, poboljšanje korisničkog iskustva i Core Web Vitals rezultata za bolje rangiranje."
+      },
+      {
+        "title": "Kreiranje landing stranica",
+        "description": "Landing stranice dizajnirane za konverzije. Svaki element služi jednom cilju: da posetioci postanu klijenti."
+      }
+    ]
+  },
+  "process": {
+    "heading": "Kako funkcioniše?",
+    "steps": [
+      {
+        "title": "Analiza",
+        "description": "Analiziram tvoj biznis, ciljnu grupu i konkurenciju"
+      },
+      {
+        "title": "Izrada sajta",
+        "description": "Pravim sajt prilagođen tvom biznisu i optimizovan za konverzije"
+      },
+      {
+        "title": "Google Ads setup",
+        "description": "Postavljam kampanje koje ciljaju prave ljude u pravom trenutku"
+      },
+      {
+        "title": "Konverzije dolaze",
+        "description": "Tvoj telefon zvoni. Tvoj inbox se puni. Tvoj biznis raste."
+      }
+    ]
+  },
+  "socialProof": {
+    "stats": [
+      { "value": "150+", "label": "Kampanja pokrenuto" },
+      { "value": "3x", "label": "Prosečan rast konverzija" },
+      { "value": "98%", "label": "Zadovoljnih klijenata" }
+    ]
+  },
+  "contact": {
+    "heading": "Spreman da kreneš?",
+    "subheading": "Popuni formu i javim ti se u roku od 24h.",
+    "name": "Ime",
+    "email": "Email",
+    "phone": "Telefon",
+    "interest": "Šta te interesuje?",
+    "interestOptions": [
+      "Google Ads",
+      "Izrada sajta",
+      "SEO",
+      "Optimizacija sajta",
+      "Landing stranica",
+      "Kompletna usluga"
+    ],
+    "message": "Poruka",
+    "submit": "Pošalji",
+    "whatsappAlt": "Ili mi piši na WhatsApp",
+    "required": "Ovo polje je obavezno",
+    "invalidEmail": "Unesi validnu email adresu",
+    "success": "Hvala! Javim ti se uskoro.",
+    "error": "Došlo je do greške. Pokušaj ponovo."
+  },
+  "footer": {
+    "copyright": "© 2026 dolasads"
+  }
+}
