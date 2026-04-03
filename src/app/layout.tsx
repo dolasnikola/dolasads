@@ -1,14 +1,24 @@
-import { Inter } from "next/font/google";
+import { Syne, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin", "latin-ext"] });
+const syne = Syne({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const GTM_ID = "GTM-WG4KX525"; // TODO: replace with your GTM container ID
+  const GTM_ID = "GTM-WG4KX525";
 
   return (
     <html>
@@ -23,7 +33,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body
+        className={`${syne.variable} ${jakarta.variable} font-sans antialiased bg-dark text-text-on-dark`}
+      >
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}

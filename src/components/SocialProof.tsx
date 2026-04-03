@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import FadeIn from "./FadeIn";
+import { motion } from "framer-motion";
 
 function useCountUp(target: string, inView: boolean) {
   const [display, setDisplay] = useState("0");
@@ -43,18 +43,30 @@ function StatCard({
   value,
   label,
   inView,
+  index,
 }: {
   value: string;
   label: string;
   inView: boolean;
+  index: number;
 }) {
   const display = useCountUp(value, inView);
 
   return (
-    <div className="text-center">
-      <div className="text-5xl font-bold text-white sm:text-6xl">{display}</div>
-      <div className="mt-2 text-white/70">{label}</div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
+      className="relative text-center lg:text-left"
+    >
+      <div className="font-display text-6xl font-bold text-lime sm:text-7xl lg:text-8xl">
+        {display}
+      </div>
+      <div className="mt-3 text-base text-text-muted-dark lg:text-lg">
+        {label}
+      </div>
+    </motion.div>
   );
 }
 
@@ -76,13 +88,20 @@ export default function SocialProof() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-navy py-20 lg:py-28">
-      <div className="mx-auto max-w-4xl px-4">
-        <div className="grid gap-12 sm:grid-cols-3">
+    <section ref={ref} className="grain-overlay relative bg-dark py-24 lg:py-32">
+      {/* Decorative orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime/3 blur-[150px] pointer-events-none" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="grid gap-16 sm:grid-cols-3 sm:gap-8">
           {stats.map((stat, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-              <StatCard value={stat.value} label={stat.label} inView={inView} />
-            </FadeIn>
+            <StatCard
+              key={i}
+              value={stat.value}
+              label={stat.label}
+              inView={inView}
+              index={i}
+            />
           ))}
         </div>
       </div>

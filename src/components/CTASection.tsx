@@ -14,19 +14,20 @@ export default function CTASection({ customCta }: CTASectionProps) {
   const locale = useLocale();
 
   return (
-    <section className="bg-navy py-20">
-      <div className="mx-auto max-w-6xl px-4 text-center">
+    <section className="grain-overlay relative bg-dark py-24">
+      <div className="absolute inset-0 bg-gradient-to-b from-lime/3 to-transparent pointer-events-none" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
         <FadeIn>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-text-on-dark sm:text-4xl lg:text-5xl">
             {t("ctaHeading")}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted-dark">
             {t("ctaSubheading")}
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href={`/${locale}#contact`}
-              className="rounded-lg bg-accent-blue px-8 py-3 text-lg font-semibold text-white transition hover:bg-accent-blue/90"
+              className="magnetic-btn rounded-full bg-lime px-8 py-3.5 text-base font-semibold text-dark transition"
             >
               {customCta || tNav("cta")}
             </a>
@@ -34,7 +35,7 @@ export default function CTASection({ customCta }: CTASectionProps) {
               href="https://wa.me/381653921999"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-white/30 px-8 py-3 text-lg font-medium text-white transition hover:bg-white/10"
+              className="rounded-full border border-dark-border px-8 py-3.5 text-base font-medium text-text-on-dark transition hover:border-whatsapp hover:text-whatsapp"
             >
               WhatsApp
             </a>

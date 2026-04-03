@@ -22,12 +22,12 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLocale}
-      className="flex items-center gap-1 rounded-full border border-white/30 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
+      className="flex items-center gap-1.5 rounded-full border border-dark-border px-3 py-1.5 text-sm font-medium text-text-on-dark transition hover:border-lime/40 hover:text-lime"
       aria-label="Switch language"
     >
-      <span className={locale === "sr" ? "font-bold" : "opacity-60"}>SR</span>
-      <span className="opacity-40">/</span>
-      <span className={locale === "en" ? "font-bold" : "opacity-60"}>EN</span>
+      <span className={locale === "sr" ? "text-lime" : "text-text-muted-dark"}>SR</span>
+      <span className="text-dark-border">/</span>
+      <span className={locale === "en" ? "text-lime" : "text-text-muted-dark"}>EN</span>
     </button>
   );
 }
