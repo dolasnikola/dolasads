@@ -6,12 +6,7 @@ export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 100) {
-        setVisible(true);
-        window.removeEventListener("scroll", onScroll);
-      }
-    };
+    const onScroll = () => setVisible(window.scrollY > 100);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
