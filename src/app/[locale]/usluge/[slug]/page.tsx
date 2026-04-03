@@ -214,7 +214,11 @@ export default async function ServiceDetailPage({
       )}
 
       {/* FAQ accordion - Google Ads only */}
-      {faq && <FAQAccordion heading={faq.heading} items={faq.items} />}
+      {faq && (
+        <div className="-mb-16">
+          <FAQAccordion heading={faq.heading} items={faq.items} />
+        </div>
+      )}
 
       {/* FAQ JSON-LD structured data */}
       {faq && (
