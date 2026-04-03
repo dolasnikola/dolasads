@@ -30,8 +30,21 @@ export default function CaseStudyStats() {
           {t("adsResultsSubheading")}
         </p>
 
-        <div className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-6 sm:gap-4 md:grid-cols-3">
-          {STAT_KEYS.map((key) => (
+        {/* Period — full width */}
+        <div className="mt-5 sm:mt-6">
+          <div className="rounded-lg bg-white/5 p-3 sm:p-4">
+            <p className="text-xs text-white/60 sm:text-sm">
+              {t("statLabels.period")}
+            </p>
+            <p className="mt-1 text-base font-bold text-white sm:text-lg">
+              {t("stats.period")}
+            </p>
+          </div>
+        </div>
+
+        {/* Remaining metrics */}
+        <div className="mt-2.5 grid grid-cols-2 gap-2.5 sm:mt-4 sm:gap-4 md:grid-cols-4">
+          {STAT_KEYS.filter((key) => key !== "period").map((key) => (
             <div
               key={key}
               className={`rounded-lg p-3 sm:p-4 ${
