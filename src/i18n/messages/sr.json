@@ -182,7 +182,79 @@
         "Remarketing kampanje",
         "Google Ads sertifikovan stručnjak"
       ],
-      "cta": "Zatraži ponudu za Google Ads"
+      "cta": "Zatraži ponudu za Google Ads",
+      "audit": {
+        "heading": "Besplatna analiza tvog Google Ads naloga",
+        "description": "Pošalji mi pristup svom nalogu i dobijaš detaljnu analizu sa konkretnim preporukama za poboljšanje. Bez obaveza.",
+        "cta": "Zatraži besplatnu analizu"
+      },
+      "packages": {
+        "heading": "Paketi Google Ads usluga",
+        "subheading": "Izaberi paket koji odgovara tvom biznisu. Svaka saradnja počinje besplatnom konsultacijom.",
+        "contactCta": "Kontaktiraj me",
+        "items": [
+          {
+            "title": "Osnovni",
+            "price": "od 200€/mesečno",
+            "description": "Idealan za početnike koji žele da se oglašavaju na Google-u.",
+            "features": [
+              "Istraživanje ključnih reči",
+              "Kreiranje i postavljanje kampanja",
+              "Postavljanje praćenja konverzija",
+              "Mesečna optimizacija kampanja",
+              "Mesečni izveštaj sa rezultatima"
+            ]
+          },
+          {
+            "title": "Napredni",
+            "description": "Za biznise koji žele više od osnovnog oglašavanja.",
+            "features": [
+              "Sve iz Osnovnog paketa",
+              "Remarketing kampanje",
+              "GA4 i GTM setup",
+              "Looker Studio live izveštaj",
+              "Kreiranje banera (1 set)"
+            ]
+          },
+          {
+            "title": "Premium",
+            "description": "Kompletna usluga za maksimalne rezultate.",
+            "features": [
+              "Sve iz Naprednog paketa",
+              "Microsoft Clarity praćenje",
+              "Dinamički remarketing",
+              "Neograničeno setova banera",
+              "Mesečne CRO preporuke"
+            ],
+            "highlighted": true
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Česta pitanja",
+        "items": [
+          {
+            "question": "Koliko košta Google oglašavanje?",
+            "answer": "Cena zavisi od industrije, konkurencije i ciljeva. Moja usluga upravljanja počinje od 200€ mesečno, a budžet za oglase se dogovara posebno. Na besplatnoj konsultaciji analiziram tvoj slučaj i dajem procenu."
+          },
+          {
+            "question": "Koliko brzo mogu da očekujem rezultate?",
+            "answer": "Prve rezultate obično vidimo u prvih 7 do 14 dana od pokretanja kampanje. Međutim, prava optimizacija zahteva 2 do 3 meseca prikupljanja podataka i prilagođavanja strategije."
+          },
+          {
+            "question": "Koji je minimalan budžet za Google Ads?",
+            "answer": "Preporučujem minimalno 300€ mesečno za budžet oglasa, ali optimalan iznos zavisi od tvoje industrije i ciljeva. Na konsultaciji pravimo plan koji odgovara tvom budžetu."
+          },
+          {
+            "question": "Kako izgleda mesečni izveštaj?",
+            "answer": "Dobijaš detaljan izveštaj sa ključnim metrikama: broj klikova, konverzije, cena po konverziji, ROI i preporuke za sledeći mesec. Sve transparentno i razumljivo."
+          },
+          {
+            "question": "Šta ako već imam Google Ads nalog?",
+            "answer": "Odlično! Uradiću besplatnu analizu tvog postojećeg naloga, identifikovaću oblasti za poboljšanje i predložiću konkretne korake za bolje rezultate."
+          }
+        ]
+      }
     },
     "izrada-sajtova": {
       "meta": {

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
+import ServicePackages from "@/components/ServicePackages";
+import FAQAccordion from "@/components/FAQAccordion";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -69,10 +71,87 @@ export default async function ServiceDetailPage({
   }[];
   const features = t.raw("features") as string[];
 
+  const isGoogleAds = slug === "google-ads";
+
+  let audit: { heading: string; description: string; cta: string } | null = null;
+  let packages: {
+    heading: string;
+    subheading: string;
+    contactCta: string;
+    items: {
+      title: string;
+      price?: string;
+      description: string;
+      features: string[];
+      highlighted?: boolean;
+    }[];
+  } | null = null;
+  let faq: {
+    heading: string;
+    items: { question: string; answer: string }[];
+  } | null = null;
+
+  if (isGoogleAds) {
+    audit = {
+      heading: t("audit.heading"),
+      description: t("audit.description"),
+      cta: t("audit.cta"),
+    };
+    packages = {
+      heading: t("packages.heading"),
+      subheading: t("packages.subheading"),
+      contactCta: t("packages.contactCta"),
+      items: t.raw("packages.items"),
+    };
+    faq = {
+      heading: t("faq.heading"),
+      items: t.raw("faq.items"),
+    };
+  }
+
   return (
     <>
       <Navbar />
       <PageHero title={t("heroTitle")} subtitle={t("heroSubtitle")} />
+
+      {/* Free audit CTA - Google Ads only */}
+      {audit && (
+        <section className="bg-dark py-16 lg:py-20">
+          <div className="mx-auto max-w-3xl px-6">
+            <FadeIn>
+              <div className="rounded-2xl border border-lime/30 bg-dark-elevated p-8 text-center sm:p-10">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-lime/15">
+                  <svg
+                    className="h-7 w-7 text-lime"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                    />
+                  </svg>
+                </div>
+                <h2 className="font-display text-2xl font-bold text-text-on-dark sm:text-3xl">
+                  {audit.heading}
+                </h2>
+                <p className="mx-auto mt-3 max-w-xl text-lg leading-relaxed text-text-muted-dark">
+                  {audit.description}
+                </p>
+                <a
+                  href="#contact"
+                  className="magnetic-btn mt-6 inline-block rounded-full bg-lime px-8 py-3.5 font-semibold text-dark transition hover:bg-lime/90"
+                >
+                  {audit.cta}
+                </a>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+      )}
 
       {/* Content sections */}
       <section className="bg-cream py-20 lg:py-28">
@@ -122,6 +201,41 @@ export default async function ServiceDetailPage({
           </FadeIn>
         </div>
       </section>
+
+      {/* Service packages - Google Ads only */}
+      {packages && (
+        <ServicePackages
+          heading={packages.heading}
+          subheading={packages.subheading}
+          contactCta={packages.contactCta}
+          items={packages.items}
+          locale={locale}
+        />
+      )}
+
+      {/* FAQ accordion - Google Ads only */}
+      {faq && <FAQAccordion heading={faq.heading} items={faq.items} />}
+
+      {/* FAQ JSON-LD structured data */}
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.items.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
 
       {/* Contact form */}
       <ContactForm />

@@ -182,7 +182,79 @@
         "Remarketing campaigns",
         "Google Ads certified specialist"
       ],
-      "cta": "Get a Google Ads quote"
+      "cta": "Get a Google Ads quote",
+      "audit": {
+        "heading": "Free Google Ads Account Analysis",
+        "description": "Send me access to your account and get a detailed analysis with specific improvement recommendations. No obligation.",
+        "cta": "Request free analysis"
+      },
+      "packages": {
+        "heading": "Google Ads Service Packages",
+        "subheading": "Choose the package that fits your business. Every collaboration starts with a free consultation.",
+        "contactCta": "Contact me",
+        "items": [
+          {
+            "title": "Basic",
+            "price": "from €200/month",
+            "description": "Ideal for beginners who want to advertise on Google.",
+            "features": [
+              "Keyword research",
+              "Campaign creation and setup",
+              "Conversion tracking setup",
+              "Monthly campaign optimization",
+              "Monthly report with results"
+            ]
+          },
+          {
+            "title": "Advanced",
+            "description": "For businesses that want more than basic advertising.",
+            "features": [
+              "Everything from the Basic package",
+              "Remarketing campaigns",
+              "GA4 and GTM setup",
+              "Looker Studio live report",
+              "Banner creation (1 set)"
+            ]
+          },
+          {
+            "title": "Premium",
+            "description": "Complete service for maximum results.",
+            "features": [
+              "Everything from the Advanced package",
+              "Microsoft Clarity tracking",
+              "Dynamic remarketing",
+              "Unlimited banner sets",
+              "Monthly CRO recommendations"
+            ],
+            "highlighted": true
+          }
+        ]
+      },
+      "faq": {
+        "heading": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "How much does Google advertising cost?",
+            "answer": "The cost depends on industry, competition, and goals. My management service starts from €200 per month, and the ad budget is agreed separately. During a free consultation, I analyze your case and provide an estimate."
+          },
+          {
+            "question": "How quickly can I expect results?",
+            "answer": "We typically see first results within 7 to 14 days of launching a campaign. However, true optimization requires 2 to 3 months of data collection and strategy adjustment."
+          },
+          {
+            "question": "What is the minimum budget for Google Ads?",
+            "answer": "I recommend a minimum of €300 per month for ad budget, but the optimal amount depends on your industry and goals. During the consultation, we create a plan that fits your budget."
+          },
+          {
+            "question": "What does the monthly report look like?",
+            "answer": "You receive a detailed report with key metrics: number of clicks, conversions, cost per conversion, ROI, and recommendations for the next month. Everything is transparent and easy to understand."
+          },
+          {
+            "question": "What if I already have a Google Ads account?",
+            "answer": "Great! I will perform a free analysis of your existing account, identify areas for improvement, and suggest specific steps for better results."
+          }
+        ]
+      }
     },
     "izrada-sajtova": {
       "meta": {
