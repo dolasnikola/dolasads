@@ -22,29 +22,29 @@ export default function CaseStudyStats() {
 
   return (
     <FadeIn>
-      <div className="mt-8 rounded-xl bg-navy p-8">
-        <h3 className="text-xl font-bold text-white">
+      <div className="mt-8 rounded-xl bg-navy p-5 sm:p-8">
+        <h3 className="text-lg font-bold text-white sm:text-xl">
           {t("adsResultsHeading")}
         </h3>
         <p className="mt-2 text-sm text-white/60">
           {t("adsResultsSubheading")}
         </p>
 
-        <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <div className="mt-5 grid grid-cols-2 gap-2.5 sm:mt-6 sm:gap-4 md:grid-cols-3">
           {STAT_KEYS.map((key) => (
             <div
               key={key}
-              className={`rounded-lg p-4 ${
+              className={`rounded-lg p-3 sm:p-4 ${
                 HIGHLIGHT_KEYS.includes(key)
                   ? "bg-accent-blue/20"
                   : "bg-white/5"
               }`}
             >
-              <p className="text-sm text-white/60">
+              <p className="text-xs text-white/60 sm:text-sm">
                 {t(`statLabels.${key}`)}
               </p>
               <p
-                className={`mt-1 text-lg font-bold ${
+                className={`mt-1 text-base font-bold sm:text-lg ${
                   HIGHLIGHT_KEYS.includes(key)
                     ? "text-accent-blue"
                     : "text-white"

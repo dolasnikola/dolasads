@@ -25,7 +25,7 @@ export default function PortfolioCard({
 }: PortfolioCardProps) {
   return (
     <FadeIn delay={delay}>
-      <div className="rounded-xl bg-white p-8 shadow-lg">
+      <div className="rounded-xl bg-white p-5 shadow-lg sm:p-8">
         <div className="flex flex-wrap items-center gap-3">
           <h3 className="text-2xl font-bold text-text-dark">{title}</h3>
           <span className="rounded-full bg-accent-blue/10 px-3 py-1 text-sm font-medium text-accent-blue">
