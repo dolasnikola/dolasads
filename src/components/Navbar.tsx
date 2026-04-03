@@ -45,9 +45,9 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-dark/90 backdrop-blur-xl py-3 border-b border-dark-border"
+          ? "bg-dark/95 md:backdrop-blur-xl py-3 border-b border-dark-border"
           : menuOpen
-            ? "bg-dark/90 backdrop-blur-xl py-5 border-b border-dark-border"
+            ? "bg-dark/95 md:backdrop-blur-xl py-5 border-b border-dark-border"
             : "bg-transparent py-5"
       }`}
     >
@@ -112,7 +112,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-dark-border bg-dark/95 px-6 py-6 backdrop-blur-xl md:hidden">
+        <div className="border-t border-dark-border bg-dark/95 px-6 py-6 md:hidden">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link

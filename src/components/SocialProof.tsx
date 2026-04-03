@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import FadeIn from "./FadeIn";
 
 function useCountUp(target: string, inView: boolean) {
   const [display, setDisplay] = useState("0");
@@ -23,13 +23,11 @@ function useCountUp(target: string, inView: boolean) {
     const duration = 2000;
     const steps = 60;
     const increment = end / steps;
-    let current = 0;
     let step = 0;
 
     const timer = setInterval(() => {
       step++;
-      current = Math.min(Math.round(increment * step), end);
-      setDisplay(`${current}${suffix}`);
+      setDisplay(`${Math.min(Math.round(increment * step), end)}${suffix}`);
       if (step >= steps) clearInterval(timer);
     }, duration / steps);
 
@@ -53,20 +51,16 @@ function StatCard({
   const display = useCountUp(value, inView);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="relative text-center lg:text-left"
-    >
-      <div className="font-display text-6xl font-bold text-lime sm:text-7xl lg:text-8xl">
-        {display}
+    <FadeIn delay={index * 0.1}>
+      <div className="relative text-center lg:text-left">
+        <div className="font-display text-6xl font-bold text-lime sm:text-7xl lg:text-8xl">
+          {display}
+        </div>
+        <div className="mt-3 text-base text-text-muted-dark lg:text-lg">
+          {label}
+        </div>
       </div>
-      <div className="mt-3 text-base text-text-muted-dark lg:text-lg">
-        {label}
-      </div>
-    </motion.div>
+    </FadeIn>
   );
 }
 
@@ -77,20 +71,22 @@ export default function SocialProof() {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setInView(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section ref={ref} className="grain-overlay relative bg-dark py-24 lg:py-32">
-      {/* Decorative orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime/3 blur-[150px] pointer-events-none" />
+    <section ref={ref} className="relative bg-dark py-24 lg:py-32">
+      {/* Orb — desktop only */}
+      <div className="orb top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-lime/3 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="grid gap-16 sm:grid-cols-3 sm:gap-8">

@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 function AnimatedCounter({
@@ -16,6 +15,9 @@ function AnimatedCounter({
   const hasRun = useRef(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasRun.current) {
@@ -33,7 +35,7 @@ function AnimatedCounter({
       },
       { threshold: 0.5 }
     );
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, [target]);
 
@@ -56,20 +58,18 @@ export default function Hero() {
 
   return (
     <section className="grain-overlay relative min-h-screen flex items-center bg-dark overflow-hidden">
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-lime/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 -left-32 w-[400px] h-[400px] rounded-full bg-lime/3 blur-[100px] pointer-events-none" />
+      {/* Decorative gradient orbs — hidden on mobile via .orb */}
+      <div className="orb top-1/4 -right-32 w-[600px] h-[600px] bg-lime/5 blur-[120px]" />
+      <div className="orb bottom-0 -left-32 w-[400px] h-[400px] bg-lime/3 blur-[100px]" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-32 lg:py-40">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           {/* Left: headline + CTA */}
           <div className="lg:col-span-7">
             {/* Eyebrow metric */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-8 inline-flex items-center gap-3 rounded-full border border-dark-border bg-dark-elevated px-5 py-2.5"
+            <div
+              className="mb-8 inline-flex items-center gap-3 rounded-full border border-dark-border bg-dark-elevated px-5 py-2.5 animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime opacity-75" />
@@ -81,31 +81,25 @@ export default function Hero() {
                 </span>{" "}
                 EUR {isSr ? "upravljanih budžeta" : "managed budgets"}
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-text-on-dark sm:text-6xl lg:text-7xl"
+            <h1
+              className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-text-on-dark sm:text-6xl lg:text-7xl animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
             >
               {t("hero.headline")}
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-6 max-w-lg text-lg text-text-muted-dark sm:text-xl leading-relaxed"
+            <p
+              className="mt-6 max-w-lg text-lg text-text-muted-dark sm:text-xl leading-relaxed animate-fade-in-up"
+              style={{ animationDelay: "0.35s" }}
             >
               {t("hero.subheadline")}
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-10 flex flex-col gap-4 sm:flex-row"
+            <div
+              className="mt-10 flex flex-col gap-4 sm:flex-row animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
             >
               <button
                 onClick={scrollToContact}
@@ -124,18 +118,16 @@ export default function Hero() {
                 </svg>
                 {t("hero.ctaWhatsapp")}
               </a>
-            </motion.div>
+            </div>
           </div>
 
-          {/* Right: trust signals as floating cards */}
+          {/* Right: trust signals — desktop only */}
           <div className="hidden lg:col-span-5 lg:flex lg:flex-col lg:items-end lg:gap-4">
             {["campaigns", "certified", "experience"].map((key, i) => (
-              <motion.div
+              <div
                 key={key}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 + i * 0.15 }}
-                className="flex items-center gap-3 rounded-xl border border-dark-border bg-dark-elevated/80 px-5 py-3.5 backdrop-blur-sm"
+                className="flex items-center gap-3 rounded-xl border border-dark-border bg-dark-elevated/80 px-5 py-3.5 animate-fade-in-up"
+                style={{ animationDelay: `${0.6 + i * 0.12}s` }}
               >
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-lime/10">
                   <svg className="h-4 w-4 text-lime" fill="currentColor" viewBox="0 0 20 20">
@@ -147,17 +139,15 @@ export default function Hero() {
                   </svg>
                 </div>
                 <span className="text-sm text-text-on-dark">{t(`trust.${key}`)}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Mobile trust signals */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 flex flex-wrap gap-3 lg:hidden"
+        <div
+          className="mt-16 flex flex-wrap gap-3 lg:hidden animate-fade-in-up"
+          style={{ animationDelay: "0.6s" }}
         >
           {["campaigns", "certified", "experience"].map((key) => (
             <div
@@ -168,7 +158,7 @@ export default function Hero() {
               {t(`trust.${key}`)}
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
