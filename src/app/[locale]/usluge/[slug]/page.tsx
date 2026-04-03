@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
-import CTASection from "@/components/CTASection";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -123,7 +123,9 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <CTASection customCta={t("cta")} />
+      {/* Contact form */}
+      <ContactForm />
+
       <Footer />
       <WhatsAppButton />
     </>
