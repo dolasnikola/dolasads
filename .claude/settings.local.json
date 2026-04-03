@@ -10,7 +10,9 @@
       "Bash(npx vercel:*)",
       "mcp__c114c367-3db6-4af0-ab69-02ee68331f47__get_access_to_vercel_url",
       "mcp__c114c367-3db6-4af0-ab69-02ee68331f47__web_fetch_vercel_url",
-      "WebFetch(domain:dolasads-e08s2u7ns-nikola-2793s-projects.vercel.app)"
+      "WebFetch(domain:dolasads-e08s2u7ns-nikola-2793s-projects.vercel.app)",
+      "mcp__c114c367-3db6-4af0-ab69-02ee68331f47__list_teams",
+      "mcp__c114c367-3db6-4af0-ab69-02ee68331f47__list_projects"
     ]
   }
 }
