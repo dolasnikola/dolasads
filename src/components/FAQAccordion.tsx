@@ -16,7 +16,7 @@ export default function FAQAccordion({ heading, items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-cream py-6 lg:py-10">
+    <section className="bg-cream py-12 lg:py-16">
       <div className="mx-auto max-w-3xl px-6">
         <h2 className="font-display text-center text-3xl font-bold text-text-on-light sm:text-4xl">
           {heading}
