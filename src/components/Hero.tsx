@@ -77,7 +77,7 @@ export default function Hero() {
               </span>
               <span className="text-sm text-text-muted-dark">
                 <span className="font-semibold text-lime">
-                  <AnimatedCounter target={300000} suffix="+" />
+                  <AnimatedCounter target={1000000} suffix="+" />
                 </span>{" "}
                 EUR {isSr ? "upravljanih budžeta" : "managed budgets"}
               </span>
