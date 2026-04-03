@@ -24,7 +24,7 @@ export default function ServicePackages({
   locale,
 }: ServicePackagesProps) {
   return (
-    <section className="bg-cream py-12 lg:py-16">
+    <section className="bg-cream py-6 lg:py-10">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center">
           <h2 className="font-display text-3xl font-bold text-text-on-light sm:text-4xl">
