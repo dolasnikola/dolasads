@@ -2,7 +2,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -43,32 +42,27 @@ export default async function HealthcarePage({
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
       {/* Problems */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-text-dark sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-text-on-light sm:text-3xl">
               {t("problemHeading")}
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {problems.map((problem, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-lg bg-red-50 p-4"
+                  className="flex items-start gap-3 rounded-xl border border-cream-muted bg-white p-5"
                 >
                   <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-red"
+                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-red-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-text-dark/80">{problem}</span>
+                  <span className="text-text-muted-light">{problem}</span>
                 </div>
               ))}
             </div>
@@ -77,32 +71,27 @@ export default async function HealthcarePage({
       </section>
 
       {/* Solutions */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-dark py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-text-dark sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-text-on-dark sm:text-3xl">
               {t("solutionHeading")}
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {solutions.map((solution, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-start gap-3 rounded-xl border border-dark-border bg-dark-elevated p-5"
                 >
                   <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-green"
+                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-lime"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-text-dark/80">{solution}</span>
+                  <span className="text-text-on-dark/80">{solution}</span>
                 </div>
               ))}
             </div>
@@ -111,32 +100,27 @@ export default async function HealthcarePage({
       </section>
 
       {/* Services included */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-text-dark sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-text-on-light sm:text-3xl">
               {t("servicesHeading")}
             </h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-lg bg-navy/5 p-4"
+                  className="flex items-start gap-3 rounded-xl border border-cream-muted bg-white p-5"
                 >
                   <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-blue"
+                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-lime-dim"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-text-dark/80">{service}</span>
+                  <span className="text-text-muted-light">{service}</span>
                 </div>
               ))}
             </div>
@@ -145,18 +129,19 @@ export default async function HealthcarePage({
       </section>
 
       {/* Healthcare CTA */}
-      <section className="bg-navy py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center">
+      <section className="grain-overlay relative bg-dark py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-lime/3 to-transparent pointer-events-none" />
+        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-text-on-dark sm:text-3xl">
               {t("ctaHeading")}
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted-dark">
               {t("ctaText")}
             </p>
             <a
               href={`/${locale}#contact`}
-              className="mt-8 inline-block rounded-lg bg-accent-blue px-8 py-3 text-lg font-semibold text-white transition hover:bg-accent-blue/90"
+              className="magnetic-btn mt-8 inline-block rounded-full bg-lime px-8 py-3.5 text-base font-semibold text-dark transition"
             >
               {t("ctaHeading")}
             </a>

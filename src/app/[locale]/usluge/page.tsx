@@ -40,9 +40,9 @@ export default async function ServicesPage({
       <Navbar />
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item, i) => (
               <ServiceCard
                 key={item.slug}

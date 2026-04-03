@@ -45,33 +45,33 @@ export default async function PricingPage({
       <Navbar />
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-4">
-          <div className="grid gap-8 md:grid-cols-2">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid gap-6 md:grid-cols-2">
             {packages.map((pkg, i) => (
               <FadeIn key={i} delay={i * 0.1}>
                 <div
-                  className={`flex h-full flex-col rounded-xl p-8 shadow-md ${
+                  className={`flex h-full flex-col rounded-2xl p-7 sm:p-8 transition-all duration-300 ${
                     pkg.highlighted
-                      ? "border-2 border-accent-blue bg-navy text-white"
-                      : "bg-white border border-gray-100"
+                      ? "border-2 border-lime bg-dark text-text-on-dark shadow-xl shadow-lime/5"
+                      : "border border-cream-muted bg-white hover:border-dark/20 hover:shadow-lg"
                   }`}
                 >
                   {pkg.highlighted && (
-                    <span className="mb-4 inline-block w-fit rounded-full bg-accent-blue/20 px-3 py-1 text-xs font-semibold text-accent-blue">
+                    <span className="mb-4 inline-block w-fit rounded-full bg-lime/15 px-3 py-1 text-xs font-semibold text-lime">
                       Preporučeno
                     </span>
                   )}
                   <h3
-                    className={`text-xl font-bold ${
-                      pkg.highlighted ? "text-white" : "text-text-dark"
+                    className={`font-display text-xl font-bold ${
+                      pkg.highlighted ? "text-text-on-dark" : "text-text-on-light"
                     }`}
                   >
                     {pkg.title}
                   </h3>
                   <p
-                    className={`mt-2 ${
-                      pkg.highlighted ? "text-white/70" : "text-text-dark/70"
+                    className={`mt-2 leading-relaxed ${
+                      pkg.highlighted ? "text-text-muted-dark" : "text-text-muted-light"
                     }`}
                   >
                     {pkg.description}
@@ -82,9 +82,7 @@ export default async function PricingPage({
                       <li key={j} className="flex items-start gap-3">
                         <svg
                           className={`mt-0.5 h-5 w-5 flex-shrink-0 ${
-                            pkg.highlighted
-                              ? "text-accent-blue"
-                              : "text-accent-green"
+                            pkg.highlighted ? "text-lime" : "text-lime-dim"
                           }`}
                           fill="none"
                           stroke="currentColor"
@@ -99,9 +97,7 @@ export default async function PricingPage({
                         </svg>
                         <span
                           className={
-                            pkg.highlighted
-                              ? "text-white/80"
-                              : "text-text-dark/80"
+                            pkg.highlighted ? "text-text-on-dark/80" : "text-text-muted-light"
                           }
                         >
                           {feature}
@@ -112,10 +108,10 @@ export default async function PricingPage({
 
                   <a
                     href={`/${locale}#contact`}
-                    className={`mt-8 block rounded-lg px-6 py-3 text-center font-semibold transition ${
+                    className={`magnetic-btn mt-8 block rounded-full px-6 py-3.5 text-center font-semibold transition ${
                       pkg.highlighted
-                        ? "bg-accent-blue text-white hover:bg-accent-blue/90"
-                        : "bg-navy text-white hover:bg-navy/90"
+                        ? "bg-lime text-dark"
+                        : "bg-dark text-lime"
                     }`}
                   >
                     {t("contactCta")}

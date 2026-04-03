@@ -49,27 +49,27 @@ export default async function PortfolioPage({
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
       {/* Agency experience */}
-      <section className="bg-white py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-cream py-16 sm:py-24">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
-            <p className="mb-8 text-center text-base leading-relaxed text-text-dark/70 sm:mb-12 sm:text-lg">
+            <p className="mb-10 text-center text-base leading-relaxed text-text-muted-light sm:text-lg">
               {t("intro")}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="rounded-xl bg-gray-50 p-5 sm:p-8">
-              <h2 className="text-2xl font-bold text-text-dark">
+            <div className="rounded-2xl border border-cream-muted bg-white p-6 sm:p-8">
+              <h2 className="font-display text-2xl font-bold text-text-on-light">
                 {t("agencyHeading")}
               </h2>
-              <p className="mt-3 text-text-dark/70">
+              <p className="mt-3 text-text-muted-light leading-relaxed">
                 {t("agencyDescription")}
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {industries.map((industry) => (
                   <span
                     key={industry}
-                    className="rounded-full bg-navy/10 px-4 py-2 text-sm font-medium text-navy"
+                    className="rounded-full bg-dark px-4 py-1.5 text-sm font-medium text-lime"
                   >
                     {industry}
                   </span>
@@ -81,9 +81,9 @@ export default async function PortfolioPage({
       </section>
 
       {/* Projects */}
-      <section className="bg-gray-50 py-12 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4">
-          <div className="space-y-12">
+      <section className="bg-dark py-16 sm:py-24">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="space-y-10">
             {projects.map((project, i) => (
               <PortfolioCard
                 key={project.id}

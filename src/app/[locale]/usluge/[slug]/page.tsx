@@ -75,15 +75,15 @@ export default async function ServiceDetailPage({
       <PageHero title={t("heroTitle")} subtitle={t("heroSubtitle")} />
 
       {/* Content sections */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
           {sections.map((section, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className={i > 0 ? "mt-16" : ""}>
-                <h2 className="text-2xl font-bold text-text-dark sm:text-3xl">
+                <h2 className="font-display text-2xl font-bold text-text-on-light sm:text-3xl">
                   {section.heading}
                 </h2>
-                <p className="mt-4 text-lg leading-relaxed text-text-dark/70">
+                <p className="mt-4 text-lg leading-relaxed text-text-muted-light">
                   {section.content}
                 </p>
               </div>
@@ -93,17 +93,17 @@ export default async function ServiceDetailPage({
       </section>
 
       {/* Features */}
-      <section className="bg-gray-50 py-20">
-        <div className="mx-auto max-w-4xl px-4">
+      <section className="bg-dark py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
             <div className="grid gap-4 sm:grid-cols-2">
               {features.map((feature, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-start gap-3 rounded-xl border border-dark-border bg-dark-elevated p-4"
                 >
                   <svg
-                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-green"
+                    className="mt-0.5 h-5 w-5 flex-shrink-0 text-lime"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ export default async function ServiceDetailPage({
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-text-dark">{feature}</span>
+                  <span className="text-text-on-dark/80">{feature}</span>
                 </div>
               ))}
             </div>

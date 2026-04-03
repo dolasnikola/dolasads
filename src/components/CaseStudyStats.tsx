@@ -22,45 +22,43 @@ export default function CaseStudyStats() {
 
   return (
     <FadeIn>
-      <div className="mt-8 rounded-xl bg-navy p-5 sm:p-8">
-        <h3 className="text-lg font-bold text-white sm:text-xl">
+      <div className="mt-8 rounded-2xl bg-dark p-5 sm:p-8">
+        <h3 className="font-display text-lg font-bold text-text-on-dark sm:text-xl">
           {t("adsResultsHeading")}
         </h3>
-        <p className="mt-2 text-sm text-white/60">
+        <p className="mt-2 text-sm text-text-muted-dark">
           {t("adsResultsSubheading")}
         </p>
 
-        {/* Period — full width */}
+        {/* Period */}
         <div className="mt-5 sm:mt-6">
-          <div className="rounded-lg bg-white/5 p-3 sm:p-4">
-            <p className="text-xs text-white/60 sm:text-sm">
+          <div className="rounded-xl border border-dark-border bg-dark-elevated p-3 sm:p-4">
+            <p className="text-xs text-text-muted-dark sm:text-sm">
               {t("statLabels.period")}
             </p>
-            <p className="mt-1 text-base font-bold text-white sm:text-lg">
+            <p className="mt-1 text-base font-bold text-text-on-dark sm:text-lg">
               {t("stats.period")}
             </p>
           </div>
         </div>
 
-        {/* Remaining metrics */}
-        <div className="mt-2.5 grid grid-cols-2 gap-2.5 sm:mt-4 sm:gap-4 md:grid-cols-4">
+        {/* Metrics */}
+        <div className="mt-2.5 grid grid-cols-2 gap-2.5 sm:mt-4 sm:gap-3 md:grid-cols-4">
           {STAT_KEYS.filter((key) => key !== "period").map((key) => (
             <div
               key={key}
-              className={`rounded-lg p-3 sm:p-4 ${
+              className={`rounded-xl p-3 sm:p-4 ${
                 HIGHLIGHT_KEYS.includes(key)
-                  ? "bg-accent-blue/20"
-                  : "bg-white/5"
+                  ? "border border-lime/20 bg-lime/5"
+                  : "border border-dark-border bg-dark-elevated"
               }`}
             >
-              <p className="text-xs text-white/60 sm:text-sm">
+              <p className="text-xs text-text-muted-dark sm:text-sm">
                 {t(`statLabels.${key}`)}
               </p>
               <p
                 className={`mt-1 text-base font-bold sm:text-lg ${
-                  HIGHLIGHT_KEYS.includes(key)
-                    ? "text-accent-blue"
-                    : "text-white"
+                  HIGHLIGHT_KEYS.includes(key) ? "text-lime" : "text-text-on-dark"
                 }`}
               >
                 {t(`stats.${key}`)}
