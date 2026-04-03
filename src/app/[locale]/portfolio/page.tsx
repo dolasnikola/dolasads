@@ -49,16 +49,16 @@ export default async function PortfolioPage({
       <PageHero title={t("heading")} subtitle={t("subheading")} />
 
       {/* Agency experience */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-20">
         <div className="mx-auto max-w-4xl px-4">
           <FadeIn>
-            <p className="mb-12 text-center text-lg leading-relaxed text-text-dark/70">
+            <p className="mb-8 text-center text-base leading-relaxed text-text-dark/70 sm:mb-12 sm:text-lg">
               {t("intro")}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="rounded-xl bg-gray-50 p-8">
+            <div className="rounded-xl bg-gray-50 p-5 sm:p-8">
               <h2 className="text-2xl font-bold text-text-dark">
                 {t("agencyHeading")}
               </h2>
@@ -81,7 +81,7 @@ export default async function PortfolioPage({
       </section>
 
       {/* Projects */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-12 sm:py-20">
         <div className="mx-auto max-w-4xl px-4">
           <div className="space-y-12">
             {projects.map((project, i) => (
