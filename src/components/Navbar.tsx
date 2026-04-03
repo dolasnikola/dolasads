@@ -58,6 +58,7 @@ export default function Navbar() {
             alt="dolasads logo"
             width={140}
             height={36}
+            style={{ height: "auto" }}
             priority
           />
         </Link>

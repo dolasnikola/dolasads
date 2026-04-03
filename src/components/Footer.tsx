@@ -16,6 +16,7 @@ export default function Footer() {
               alt="dolasads logo"
               width={100}
               height={26}
+              style={{ height: "auto" }}
             />
           </Link>
 
