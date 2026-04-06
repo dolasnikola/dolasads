@@ -120,9 +120,11 @@ export default function LeadFinderPage() {
 
     try {
       const query = `${niche} ${city}`;
-      const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${encodeURIComponent(query)}&key=${gKey}`;
-      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-      const resp = await fetch(proxyUrl);
+      const resp = await fetch("/api/places", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "search", query, key: gKey }),
+      });
       const data = await resp.json();
 
       if (data.status === "REQUEST_DENIED") {
@@ -143,9 +145,11 @@ export default function LeadFinderPage() {
         const p = places[i];
         setLoadingText(`Auditing ${i + 1}/${places.length}: ${p.name}...`);
 
-        const detailUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${p.place_id}&fields=name,formatted_address,formatted_phone_number,website,rating,user_ratings_total,url&key=${gKey}`;
-        const detailProxy = `https://corsproxy.io/?${encodeURIComponent(detailUrl)}`;
-        const dResp = await fetch(detailProxy);
+        const dResp = await fetch("/api/places", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "details", placeId: p.place_id, key: gKey }),
+        });
         const dData = await dResp.json();
         const det = dData.result || {};
 
