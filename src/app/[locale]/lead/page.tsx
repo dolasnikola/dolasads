@@ -139,7 +139,7 @@ export default function LeadFinderPage() {
         throw new Error("No results found. Try a different niche or city.");
       }
 
-      const places = data.results.slice(0, 15);
+      const places = data.results.slice(0, 10);
       setLoadingText(`Auditing ${places.length} businesses...`);
 
       const newLeads: Lead[] = [];
@@ -165,6 +165,9 @@ export default function LeadFinderPage() {
         let hasFacebook: boolean | null = hasWebsite ? null : false;
 
         if (hasWebsite) {
+          setLoadingText(
+            `Auditing ${i + 1}/${places.length}: ${p.name} — scanning website...`
+          );
           try {
             const auditResp = await fetch("/api/audit", {
               method: "POST",
@@ -172,10 +175,14 @@ export default function LeadFinderPage() {
               body: JSON.stringify({ url: det.website }),
             });
             const audit = await auditResp.json();
-            hasGA = audit.hasGA ?? null;
-            hasGTM = audit.hasGTM ?? null;
-            hasAds = audit.hasAds ?? null;
-            hasFacebook = audit.hasFacebook ?? null;
+            if (audit.reachable) {
+              // Site was loaded — false means confirmed missing, true means found
+              hasGA = audit.hasGA;
+              hasGTM = audit.hasGTM;
+              hasAds = audit.hasAds;
+              hasFacebook = audit.hasFacebook;
+            }
+            // If not reachable, values stay null (unknown)
           } catch {
             // Audit failed — leave as null (unknown)
           }
