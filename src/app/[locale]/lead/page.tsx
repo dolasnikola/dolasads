@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 interface Lead {
   name: string;
@@ -383,7 +381,6 @@ Write ONLY the email, no subject line, no explanation.`;
 
   return (
     <>
-      <Navbar />
 
       {/* Hero */}
       <section className="grain-overlay relative bg-dark pt-28 pb-14 lg:pt-36 lg:pb-16 overflow-hidden">
@@ -716,7 +713,6 @@ Write ONLY the email, no subject line, no explanation.`;
         </div>
       )}
 
-      <Footer />
     </>
   );
 }
