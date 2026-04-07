@@ -127,9 +127,12 @@ export default function LeadFinderPage() {
       });
       const data = await resp.json();
 
-      if (data.status === "REQUEST_DENIED") {
+      if (data.error) {
+        throw new Error(data.error);
+      }
+      if (data.status && data.status !== "OK" && data.status !== "ZERO_RESULTS") {
         throw new Error(
-          "Google API key denied. Check your key has Places API enabled."
+          `Google API error: ${data.status}. ${data.error_message || "Check your API key and ensure Places API is enabled."}`
         );
       }
       if (!data.results || data.results.length === 0) {
