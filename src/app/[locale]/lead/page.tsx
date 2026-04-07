@@ -139,7 +139,7 @@ export default function LeadFinderPage() {
         throw new Error("No results found. Try a different niche or city.");
       }
 
-      const places = data.results.slice(0, 15);
+      const places = data.results.slice(0, 10);
       setLoadingText(`Auditing ${places.length} businesses...`);
 
       const newLeads: Lead[] = [];
@@ -157,25 +157,66 @@ export default function LeadFinderPage() {
         const det = dData.result || {};
 
         const hasWebsite = !!det.website;
-        let score = hasWebsite ? 10 : 35;
-        score += Math.floor(Math.random() * 30) + 20;
-        score = Math.min(score, 95);
+
+        // Audit the website for GA4, GTM, Ads, Facebook
+        let hasGA: boolean | null = hasWebsite ? null : false;
+        let hasGTM: boolean | null = hasWebsite ? null : false;
+        let hasAds: boolean | null = hasWebsite ? null : false;
+        let hasFacebook: boolean | null = hasWebsite ? null : false;
+
+        if (hasWebsite) {
+          setLoadingText(
+            `Auditing ${i + 1}/${places.length}: ${p.name} — scanning website...`
+          );
+          try {
+            const auditResp = await fetch("/api/audit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ url: det.website }),
+            });
+            const audit = await auditResp.json();
+            if (audit.reachable) {
+              // Site was loaded — false means confirmed missing, true means found
+              hasGA = audit.hasGA;
+              hasGTM = audit.hasGTM;
+              hasAds = audit.hasAds;
+              hasFacebook = audit.hasFacebook;
+            }
+            // If not reachable, values stay null (unknown)
+          } catch {
+            // Audit failed — leave as null (unknown)
+          }
+        }
+
+        // Score: higher = more opportunity (more things missing)
+        let score = 0;
+        if (!hasWebsite) score += 30;
+        if (hasGA === false) score += 15;
+        if (hasGTM === false) score += 10;
+        if (hasAds === false) score += 20;
+        if (hasFacebook === false) score += 10;
+        // Bonus for businesses with good reviews but missing digital
+        const rating = det.rating || p.rating || 0;
+        const reviews = det.user_ratings_total || p.user_ratings_total || 0;
+        if (rating >= 4 && reviews >= 20) score += 10;
+        if (reviews >= 100) score += 5;
+        score = Math.min(score, 100);
 
         newLeads.push({
           name: det.name || p.name,
           address: det.formatted_address || p.formatted_address,
           phone: det.formatted_phone_number || null,
           website: det.website || null,
-          rating: det.rating || p.rating || null,
-          ratingsTotal: det.user_ratings_total || p.user_ratings_total || 0,
+          rating: rating || null,
+          ratingsTotal: reviews,
           mapsUrl:
             det.url ||
             `https://maps.google.com/?q=${encodeURIComponent(p.name)}`,
           hasWebsite,
-          hasGA: hasWebsite ? null : false,
-          hasGTM: hasWebsite ? null : false,
-          hasAds: null,
-          hasFacebook: null,
+          hasGA,
+          hasGTM,
+          hasAds,
+          hasFacebook,
           score,
         });
       }
