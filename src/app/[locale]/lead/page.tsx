@@ -20,6 +20,19 @@ interface Lead {
   score: number;
 }
 
+function computeScore(lead: Lead): number {
+  let score = 0;
+  if (!lead.hasWebsite) score += 30;
+  if (lead.hasGA === false) score += 15;
+  if (lead.hasGTM === false) score += 10;
+  if (lead.hasAds === false) score += 20;
+  if (lead.hasFacebook === false) score += 10;
+  const rating = lead.rating || 0;
+  if (rating >= 4 && lead.ratingsTotal >= 20) score += 10;
+  if (lead.ratingsTotal >= 100) score += 5;
+  return Math.min(score, 100);
+}
+
 const FILTERS = [
   { key: "all", label: "All" },
   { key: "hot", label: "Hot leads" },
@@ -140,13 +153,13 @@ export default function LeadFinderPage() {
       }
 
       const places = data.results.slice(0, 10);
-      setLoadingText(`Auditing ${places.length} businesses...`);
+      setLoadingText(`Fetching details for ${places.length} businesses...`);
 
+      // Step 1: Get place details from Google (sequential to respect rate limits)
       const newLeads: Lead[] = [];
-
       for (let i = 0; i < places.length; i++) {
         const p = places[i];
-        setLoadingText(`Auditing ${i + 1}/${places.length}: ${p.name}...`);
+        setLoadingText(`Loading ${i + 1}/${places.length}: ${p.name}...`);
 
         const dResp = await fetch("/api/places", {
           method: "POST",
@@ -155,54 +168,11 @@ export default function LeadFinderPage() {
         });
         const dData = await dResp.json();
         const det = dData.result || {};
-
         const hasWebsite = !!det.website;
-
-        // Audit the website for GA4, GTM, Ads, Facebook
-        let hasGA: boolean | null = hasWebsite ? null : false;
-        let hasGTM: boolean | null = hasWebsite ? null : false;
-        let hasAds: boolean | null = hasWebsite ? null : false;
-        let hasFacebook: boolean | null = hasWebsite ? null : false;
-
-        if (hasWebsite) {
-          setLoadingText(
-            `Auditing ${i + 1}/${places.length}: ${p.name} — scanning website...`
-          );
-          try {
-            const auditResp = await fetch("/api/audit", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ url: det.website }),
-            });
-            const audit = await auditResp.json();
-            if (audit.reachable) {
-              // Site was loaded — false means confirmed missing, true means found
-              hasGA = audit.hasGA;
-              hasGTM = audit.hasGTM;
-              hasAds = audit.hasAds;
-              hasFacebook = audit.hasFacebook;
-            }
-            // If not reachable, values stay null (unknown)
-          } catch {
-            // Audit failed — leave as null (unknown)
-          }
-        }
-
-        // Score: higher = more opportunity (more things missing)
-        let score = 0;
-        if (!hasWebsite) score += 30;
-        if (hasGA === false) score += 15;
-        if (hasGTM === false) score += 10;
-        if (hasAds === false) score += 20;
-        if (hasFacebook === false) score += 10;
-        // Bonus for businesses with good reviews but missing digital
         const rating = det.rating || p.rating || 0;
         const reviews = det.user_ratings_total || p.user_ratings_total || 0;
-        if (rating >= 4 && reviews >= 20) score += 10;
-        if (reviews >= 100) score += 5;
-        score = Math.min(score, 100);
 
-        newLeads.push({
+        const lead: Lead = {
           name: det.name || p.name,
           address: det.formatted_address || p.formatted_address,
           phone: det.formatted_phone_number || null,
@@ -213,18 +183,68 @@ export default function LeadFinderPage() {
             det.url ||
             `https://maps.google.com/?q=${encodeURIComponent(p.name)}`,
           hasWebsite,
-          hasGA,
-          hasGTM,
-          hasAds,
-          hasFacebook,
-          score,
-        });
+          hasGA: hasWebsite ? null : false,
+          hasGTM: hasWebsite ? null : false,
+          hasAds: hasWebsite ? null : false,
+          hasFacebook: hasWebsite ? null : false,
+          score: 0,
+        };
+        lead.score = computeScore(lead);
+        newLeads.push(lead);
       }
 
+      // Step 2: Show results immediately, then audit websites in background
       newLeads.sort((a, b) => b.score - a.score);
       setLeads(newLeads);
       setShowResults(true);
       setLoading(false);
+
+      // Step 3: Audit all websites with actual sites in parallel
+      const sitesToAudit = newLeads
+        .map((l, i) => ({ lead: l, idx: i }))
+        .filter((x) => x.lead.hasWebsite && x.lead.website);
+
+      if (sitesToAudit.length > 0) {
+        setLoadingText(`Scanning ${sitesToAudit.length} websites for GA4, GTM, Ads...`);
+        setLoading(true);
+
+        const auditPromises = sitesToAudit.map(async ({ lead, idx }) => {
+          try {
+            const auditResp = await fetch("/api/audit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ url: lead.website }),
+            });
+            const audit = await auditResp.json();
+            if (audit.reachable) {
+              return { idx, hasGA: audit.hasGA, hasGTM: audit.hasGTM, hasAds: audit.hasAds, hasFacebook: audit.hasFacebook };
+            }
+          } catch {
+            // Audit failed
+          }
+          return null;
+        });
+
+        const results = await Promise.all(auditPromises);
+
+        // Apply all audit results at once and recalculate scores
+        setLeads((prev) => {
+          const updated = [...prev];
+          for (const r of results) {
+            if (!r) continue;
+            const lead = { ...updated[r.idx] };
+            lead.hasGA = r.hasGA;
+            lead.hasGTM = r.hasGTM;
+            lead.hasAds = r.hasAds;
+            lead.hasFacebook = r.hasFacebook;
+            lead.score = computeScore(lead);
+            updated[r.idx] = lead;
+          }
+          updated.sort((a, b) => b.score - a.score);
+          return updated;
+        });
+        setLoading(false);
+      }
     } catch (e) {
       setLoading(false);
       showError(

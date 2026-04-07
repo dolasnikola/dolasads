@@ -8,7 +8,7 @@ async function fetchHtml(url: string): Promise<string | null> {
       Accept: "text/html,application/xhtml+xml,*/*",
     },
     redirect: "follow",
-    signal: AbortSignal.timeout(10000),
+    signal: AbortSignal.timeout(5000),
   };
 
   // Try https first, then http
